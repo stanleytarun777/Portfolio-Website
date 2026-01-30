@@ -11,9 +11,11 @@ export const projects = [
         title: "Key Features",
         points: [
           "Create, edit, and delete tasks (CRUD functionality) with real-time interface updates.",
-          "Responsive and mobile-friendly interface",
+          "Responsive and mobile-friendly interface.",
           "User authentication and session-based access control.",
           "Theme customization and dashboard-style navigation.",
+          "Statistics and productivity tracking view.",
+          "Calendar view for task scheduling and deadlines.",
         ],
       },
       {
