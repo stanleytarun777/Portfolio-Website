@@ -46,8 +46,8 @@ export const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio website built to showcase my projects, skills, and experience through a clean and responsive interface.",
     technologies: ["HTML", "CSS", "JavaScript", "React"],
-    githubLink: "https://github.com/stanleytarun777/Portfolio-Website", 
-    liveLink: "https://portfolio-website1-cyan-gamma.vercel.app",
+    githubLink: "https://github.com/stanleytarun777/portfolio-website1.git", 
+    liveLink: "https://portfolio-website1-cyan-gamma.vercel.app/",
 
     sections: [
       {

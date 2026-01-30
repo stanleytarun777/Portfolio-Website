@@ -28,8 +28,8 @@ export default function ProjectCard({ project }) {
             </div>
           ))}
 
-          <a href={project.githubLink} target="_blank">Github Repository</a>
-          <a href={project.liveLink} target="_blank">Live Demo</a>
+          <a href={project.githubLink} target="_blank" rel="noreferrer">Github Repository</a>
+          <a href={project.liveLink} target="_blank" rel="noreferrer">Live Demo</a>
           
         </>
       )}

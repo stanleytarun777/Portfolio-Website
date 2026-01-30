@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section classsName="about">
+        <section className="about">
             <h2>About Me</h2>
             <p className="about-me"> I am a Computer Information Systems (CIS) major with a concentration in Computer Science, pursuing opportunities in software engineering, web development, and technology roles. My academic background blends technical programming skills with a strong understanding of business systems and information technology, allowing me to approach software development from both a technical and organizational perspective.
 
