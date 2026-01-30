@@ -1,4 +1,11 @@
-
+:root {
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+  --shadow-1: 0 12px 24px rgba(15, 23, 42, 0.08);
+  --shadow-2: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-3: 0 18px 36px rgba(15, 23, 42, 0.14);
+  --highlight: 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
 
 body {
   margin: 0;
@@ -200,7 +207,7 @@ section h2 {
 }
 
 .about {
-  background: #020617;
+  background: var(--surface);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
