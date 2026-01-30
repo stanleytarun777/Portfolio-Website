@@ -20,7 +20,6 @@ export default function Skills() {
                     <li>REST APIs (frontend and backend integration)</li>
                     <li>Supabase (authentication, database integration, client SDK)</li>
                     <li>Basic SQL (querying, filtering, and relational concepts)</li>
-                    <li>Basic Backend logic</li>
                     <li>Data handling fundamentals</li>
                 </ul>
             </div>
