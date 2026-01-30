@@ -8,7 +8,7 @@ export const projects = [
 
     sections: [
       {
-        title: "Key Features",
+        title: "Key Features of the Workflow App",
         points: [
           "Create, edit, and delete tasks (CRUD functionality) with real-time interface updates.",
           "Responsive and mobile-friendly interface.",
@@ -74,6 +74,7 @@ export const projects = [
           "Built reusable components for project cards.",
           "Implemented smooth scrolling and navigation links.",
           "Optimized layout using CSS Flexbox and Grid.",
+          "Deployed the website to Cloud (Vercel) for easy access.",
         ],
       },
       {
@@ -82,6 +83,7 @@ export const projects = [
           "Improving UI/UX design skills.",
           "Structuring multi-section websites.",
           "Enhancing accessibility and performance.",
+          "Learnt how to deploy to cloud platforms (Vercel).",
         ],
       },
       {

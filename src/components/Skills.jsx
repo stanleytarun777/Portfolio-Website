@@ -10,7 +10,7 @@ export default function Skills() {
                     <li>CSS</li>
                     <li>JavaScript</li>
                     <li>React</li>
-                    <li>Responsive Design</li>
+                    <li>Responsive and mobile-friendly Design</li>
 
                 </ul>
             </div>
@@ -18,7 +18,8 @@ export default function Skills() {
                 <h3>Backend & Data (Foundational)</h3>
                 <ul>
                     <li>REST APIs (frontend and backend integration)</li>
-                    <li>Basic SQL</li>
+                    <li>Supabase (authentication, database integration, client SDK)</li>
+                    <li>Basic SQL (querying, filtering, and relational concepts)</li>
                     <li>Basic Backend logic</li>
                     <li>Data handling fundamentals</li>
                 </ul>
@@ -29,7 +30,8 @@ export default function Skills() {
                     <li>Git & GitHub</li>
                     <li>VS Code</li>
                     <li>Chrome DevTools</li>
-                    <li>Basic Command Line</li>
+                    <li>Basic Command Line (basic Git, npm, and project tooling)</li>
+                    <li>Vercel (deployment and environment configuration)</li>
                     <li>Debugging and testing fundamentals</li>
                 </ul>
             </div>
