@@ -3,8 +3,8 @@ export const projects = [
     title: "WorkFlow App",
     description: "A task management application built with React to actively manage and organize tasks effectively through a clean and intuitive interface.",
     technologies: ["React", "JavaScript", "CSS"],
-    githubLink: "Add your GitHub link here",
-    liveLink: "Add your live link here",
+    githubLink: "https://github.com/stanleytarun777/TaskFlow-Lane.git",
+    liveLink: "https://task-flow-lane.vercel.app/",
 
     sections: [
       {
@@ -46,8 +46,8 @@ export const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio website built to showcase my projects, skills, and experience through a clean and responsive interface.",
     technologies: ["HTML", "CSS", "JavaScript", "React"],
-    githubLink: "Add your GitHub link here",
-    liveLink: "Add your live link here",
+    githubLink: "https://github.com/stanleytarun777/Portfolio-Website", 
+    liveLink: "https://portfolio-website1-cyan-gamma.vercel.app",
 
     sections: [
       {
