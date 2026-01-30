@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "WorkFlow App",
     description: "A task management application built with React to actively manage and organize tasks effectively through a clean and intuitive interface.",
-    technologies: ["React", "JavaScript", "CSS"],
+    technologies: ["React", "JavaScript", "HTML", "CSS", "Supabase", "Vercel",],
     githubLink: "https://github.com/stanleytarun777/TaskFlow-Lane.git",
     liveLink: "https://task-flow-lane.vercel.app/",
 
@@ -10,9 +10,10 @@ export const projects = [
       {
         title: "Key Features",
         points: [
-          "Create, edit, and delete tasks (CRUD functionality).",
-          "Responsive user interface",
-          "Organized task display",
+          "Create, edit, and delete tasks (CRUD functionality) with real-time interface updates.",
+          "Responsive and mobile-friendly interface",
+          "User authentication and session-based access control.",
+          "Theme customization and dashboard-style navigation.",
         ],
       },
       {
@@ -21,7 +22,9 @@ export const projects = [
           "Designed and implemented the frontend using React components and state management.",
           "Implemented CRUD operations for task management.",
           "Implemented application logic and state handling.",
+          "Integrated Supabase as the backend for data storage and authentication.",
           "Focused on usability and clean component structure.",
+          "Deployed the application to Vercel and configured environment variables for production.",
         ],
       },
       {
@@ -30,6 +33,9 @@ export const projects = [
           "Managing application state effectively in React.",
           "Structuring React components for maintainability and scalability.",
           "Debugging and improving UI flow.",
+          "Integrating frontend applications with backend services (Supabase).",
+          "Deploying React applications to cloud platforms (Vercel).",
+          "Handling authentication flows and session-based application behavior.",
         ],
       },
       {
