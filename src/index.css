@@ -169,7 +169,6 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  text-decoration: none;
   color: #0f172a;
   font-weight: 600;
   box-shadow:
@@ -183,11 +182,41 @@ section {
     0 4px 10px rgba(0,0,0,0.10),
     0 14px 28px rgba(0,0,0,0.14);
 }
+.hero-resume-title {
+  font-size: 1.05rem;
+}
 .hero-resume-card svg {
   display: block;
 }
 .hero-resume-card span {
   font-size: 0.95rem;
+}
+.hero-resume-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+.resume-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background: #0f172a;
+  color: #f8fafc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+}
+.resume-btn:hover {
+  transform: translateY(-1px);
+}
+.resume-btn.outline {
+  background: transparent;
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  box-shadow: none;
 }
 
 .project-card {
@@ -301,6 +330,9 @@ section h2 {
   }
   .hero-resume-card {
     width: 100%;
+  }
+  .hero-resume-actions {
+    flex-direction: column;
   }
 }
 

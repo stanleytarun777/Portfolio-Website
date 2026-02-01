@@ -10,14 +10,7 @@ export default function Hero() {
                     <li>Ability to learn quickly and adapt to new tools and environments.</li>
                 </ul>
 
-                <a
-                    className="hero-resume-card"
-                    href="/Stanley_Nyford_Resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    download
-                    aria-label="Download resume PDF"
-                >
+                <div className="hero-resume-card" aria-label="Resume download and preview">
                     <svg
                         width="48"
                         height="48"
@@ -46,8 +39,26 @@ export default function Hero() {
                             strokeLinecap="round"
                         />
                     </svg>
-                    <span>Download Resume</span>
-                </a>
+                    <span className="hero-resume-title">Resume</span>
+                    <div className="hero-resume-actions">
+                        <a
+                            className="resume-btn"
+                            href="/Stanley_Nyford_Resume.pdf"
+                            download
+                            rel="noopener noreferrer"
+                        >
+                            Download
+                        </a>
+                        <a
+                            className="resume-btn outline"
+                            href="/Stanley_Nyford_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Preview
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </section>
