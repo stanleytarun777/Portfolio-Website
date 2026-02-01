@@ -72,6 +72,35 @@ section {
   background: #020617;
 }
 
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(229, 231, 235, 0.3);
+  border-radius: 999px;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
 .navbar ul {
   display: flex;
   flex-wrap: wrap;
@@ -119,8 +148,8 @@ section {
 .navbar h1 {
   background: #020617;
   color: #e5e7eb;
-  padding: 30px 30px;
-  margin-top: 0%;
+  padding: 20px 30px;
+  margin: 0;
   display: flex;
 }
 
@@ -328,13 +357,28 @@ section h2 {
 }
 @media (max-width: 768px) {
   .skill-categories {
-    flex-direction: column;
-    text-align: center;
+    grid-template-columns: 1fr;
+  }
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .navbar-inner {
+    padding: 8px 16px;
+  }
+  .navbar-toggle {
+    display: flex;
   }
   .navbar ul {
     flex-direction: column;
+    align-items: stretch;
     gap: 8px;
     padding: 12px 20px;
+    display: none;
+  }
+  .navbar ul.open {
+    display: flex;
   }
   .hero-summary {
     flex-direction: column;
