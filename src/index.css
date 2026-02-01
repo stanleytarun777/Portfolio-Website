@@ -316,8 +316,8 @@ section h2 {
 
 .skill-categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
   width: 100%;
   padding: 24px 0 8px;
 }
@@ -356,15 +356,18 @@ section h2 {
 }
 
 .skill-card {
-  min-height: 240px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
   line-height: 1.6;
-  letter-spacing: 0.5px;
-  padding: 20px;
+  letter-spacing: 0.4px;
+  padding: 18px;
   color: rgb(5, 1, 1);
   border-radius: 14px;
   text-align: left;
   background: var(--surface-soft);
   border: 1px solid rgba(15, 23, 42, 0.08);
+  overflow-wrap: anywhere;
 
   box-shadow:
     0 1px 2px rgba(0,0,0,0.05),
@@ -382,17 +385,22 @@ section h2 {
 }
 
 .skill-card h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
+  margin: 0 0 10px;
+  font-size: 1rem;
 }
 
 .skill-card ul {
-  padding-left: 18px;
-  margin: 12px 0 0;
+  list-style: disc;
+  padding: 0 0 0 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .skill-card li {
-  margin-bottom: 6px;
+  margin: 0;
+  font-size: 0.92rem;
 }
 
 .contact {
