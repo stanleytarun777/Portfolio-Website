@@ -2,6 +2,13 @@ import { useState } from "react";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const links = [
+        { href: "#Projects", label: "Projects" },
+        { href: "#skills", label: "Skills" },
+        { href: "#contact", label: "Contact" },
+    ];
+
+    const handleLinkClick = () => setOpen(false);
 
     return (
         <nav className="navbar">
@@ -11,6 +18,8 @@ export default function Navbar() {
                 <button
                     className="navbar-toggle"
                     aria-label="Toggle navigation"
+                    aria-expanded={open}
+                    aria-controls="primary-navigation"
                     onClick={() => setOpen(!open)}
                 >
                     <span></span>
@@ -19,10 +28,14 @@ export default function Navbar() {
                 </button>
             </div>
 
-            <ul className={open ? "open" : ""}>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul id="primary-navigation" className={open ? "open" : ""}>
+                {links.map((link) => (
+                    <li key={link.href}>
+                        <a href={link.href} onClick={handleLinkClick}>
+                            {link.label}
+                        </a>
+                    </li>
+                ))}
             </ul>
         </nav>
     );
