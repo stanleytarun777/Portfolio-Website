@@ -2,8 +2,8 @@ export default function Skills() {
     return (
         <section className="skills" id="skills">
             <h2>Skills</h2>
-         <section className="skill-categories">
-            <div className="skill-category1">
+            <section className="skill-categories">
+                <div className="skill-card">
                 <h3>Frontend Development</h3>
                 <ul>
                     <li>HTML5</li>
@@ -14,7 +14,7 @@ export default function Skills() {
 
                 </ul>
             </div>
-            <div className="skill-category2">
+            <div className="skill-card">
                 <h3>Backend & Data (Foundational)</h3>
                 <ul>
                     <li>REST APIs (frontend and backend integration)</li>
@@ -23,7 +23,7 @@ export default function Skills() {
                     <li>Data handling fundamentals</li>
                 </ul>
             </div>
-            <div className="skill-category3">
+            <div className="skill-card">
                 <h3>Tools & Platforms</h3>
                 <ul>
                     <li>Git & GitHub</li>
