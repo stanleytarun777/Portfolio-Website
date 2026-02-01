@@ -39,6 +39,7 @@ section {
     var(--highlight);
 
   position: relative;
+  scroll-margin-top: 120px;
 }
 
 section::before {
