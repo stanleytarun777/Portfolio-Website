@@ -12,7 +12,7 @@ export default function Hero() {
 
                 <a
                     className="hero-resume-card"
-                    href="/resume.pdf"
+                    href="/Stanley_Nyford_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     download
@@ -50,10 +50,6 @@ export default function Hero() {
                 </a>
             </div>
 
-            <div className="hero-buttons">
-                <a className="btn" href="#Projects">View Projects</a>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
-            </div>
         </section>
     );
 }
