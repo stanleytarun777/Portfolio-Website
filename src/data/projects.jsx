@@ -80,7 +80,7 @@ export const projects = [
       {
         title: "What I Learned",
         points: [
-          "Improving UI/UX design skills.",
+          "Improving UI design skills.",
           "Structuring multi-section websites.",
           "Enhancing accessibility and performance.",
           "Learnt how to deploy to cloud platforms (Vercel).",

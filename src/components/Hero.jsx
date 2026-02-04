@@ -6,7 +6,7 @@ export default function Hero() {
                 <ul>
                     <li>Strong foundation in programming and web development.</li>
                     <li>Understanding of how technology supports business systems.</li>
-                    <li>Experience building real projects, not just coursework demos.</li>
+                    <li>Experience building projects, not just coursework demos.</li>
                     <li>Ability to learn quickly and adapt to new tools and environments.</li>
                 </ul>
 

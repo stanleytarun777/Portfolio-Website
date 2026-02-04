@@ -11,6 +11,7 @@ export default function Skills() {
                     <li>JavaScript</li>
                     <li>React</li>
                     <li>Responsive and mobile-friendly Design</li>
+                    <li>(Currently learning Python - Expected completion before Summer Internship starts.)</li>
 
                 </ul>
             </div>
@@ -30,8 +31,6 @@ export default function Skills() {
                     <li>VS Code</li>
                     <li>Chrome DevTools</li>
                     <li>Basic Command Line (basic Git, npm, and project tooling)</li>
-                    <li>Vercel (deployment and environment configuration)</li>
-                    <li>Debugging and testing fundamentals</li>
                 </ul>
             </div>
             </section>

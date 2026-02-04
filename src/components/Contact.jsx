@@ -4,7 +4,7 @@ export default function Contact() {
             <h2>Contact</h2>
             <p>
                 Email:
-                <a href="mailto:snyford@nicholls.edu"> snyford@nicholls.edu</a>
+                <a href="mailto:nyfordstanley777@gmail.com"> snyford@nicholls.edu</a>
             </p>
             <p>
                 Phone:
