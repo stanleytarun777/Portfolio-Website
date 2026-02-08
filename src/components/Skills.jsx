@@ -6,7 +6,7 @@ export default function Skills() {
                 <div className="skill-card">
                 <h3>Frontend Development</h3>
                 <ul>
-                    <li>HTML5</li>
+                    <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
                     <li>React</li>
