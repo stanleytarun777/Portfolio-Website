@@ -1,4 +1,6 @@
 export default function Hero() {
+    const resumeUrl = `${import.meta.env.BASE_URL}Stanley_Nyford_Resume.pdf`;
+
     return (
         <section className="hero">
             <h2>What I Bring as a CIS major</h2>
@@ -43,7 +45,7 @@ export default function Hero() {
                     <div className="hero-resume-actions">
                         <a
                             className="resume-btn"
-                            href="/Stanley_Nyford_Resume.pdf"
+                            href={resumeUrl}
                             download
                             rel="noopener noreferrer"
                         >
@@ -51,7 +53,7 @@ export default function Hero() {
                         </a>
                         <a
                             className="resume-btn outline"
-                            href="/Stanley_Nyford_Resume.pdf"
+                            href={resumeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
