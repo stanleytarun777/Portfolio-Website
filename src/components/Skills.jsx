@@ -1,39 +1,51 @@
-export default function Skills() {
-    return (
-        <section className="skills" id="skills">
-            <h2>Skills</h2>
-            <section className="skill-categories">
-                <div className="skill-card">
-                <h3>Frontend Development</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Responsive and mobile-friendly Design</li>
-                    <li>(Currently learning Python - Expected completion before Summer Internship starts.)</li>
+import { skillGroups } from "../data/skills.js";
 
-                </ul>
+export default function Skills() {
+  return (
+    <section
+      id="skills"
+      className="rounded-[2rem] border border-white/60 bg-white/56 p-6 shadow-[0_24px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl lg:p-8"
+    >
+      <div className="max-w-2xl">
+        <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Skills</p>
+        <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
+          Clean capability blocks with consistent depth and spacing.
+        </h2>
+        <p className="mt-5 text-base leading-8 text-slate-600">
+          My skill set is grounded in practical web development, thoughtful interface building,
+          and reliable project workflows.
+        </p>
+      </div>
+
+      <div className="mt-8 grid gap-4 lg:grid-cols-3">
+        {skillGroups.map((group) => (
+          <article
+            key={group.title}
+            className="rounded-[1.75rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(245,248,252,0.76))] p-5 shadow-[0_18px_40px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_54px_rgba(15,23,42,0.1)]"
+          >
+            <div className="flex items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[radial-gradient(circle_at_30%_30%,rgba(50,96,154,0.95),rgba(16,35,63,1))] shadow-[0_10px_24px_rgba(18,58,114,0.22)]">
+                <span className="h-2.5 w-2.5 rounded-full bg-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold tracking-tight text-slate-900">{group.title}</h3>
+                <p className="mt-1 text-sm leading-6 text-slate-500">{group.description}</p>
+              </div>
             </div>
-            <div className="skill-card">
-                <h3>Backend & Data (Foundational)</h3>
-                <ul>
-                    <li>REST APIs (frontend and backend integration)</li>
-                    <li>Supabase (authentication, database integration)</li>
-                    <li>Basic SQL (querying, filtering, and relational concepts)</li>
-                    <li>Data handling fundamentals</li>
-                </ul>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-slate-200 bg-white/70 px-3 py-2 text-sm text-slate-600"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
-            <div className="skill-card">
-                <h3>Tools & Platforms</h3>
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>VS Code</li>
-                    <li>Chrome DevTools</li>
-                    <li>Basic Command Line (basic Git, npm, and project tooling)</li>
-                </ul>
-            </div>
-            </section>
-        </section>
-    );
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
