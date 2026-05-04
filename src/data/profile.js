@@ -5,6 +5,7 @@ export const profile = {
   major: "Computer Information Systems",
   concentration: "Computer Science concentration",
   graduation: "Graduation timeline available on request",
+  image: "/profile-headshot.jpeg",
   email: "nyfordstanley777@gmail.com",
   phone: "(985) 426-2099",
   github: "https://github.com/stanleytarun777",

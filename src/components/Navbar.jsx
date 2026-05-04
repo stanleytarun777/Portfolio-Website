@@ -10,28 +10,36 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [showImage, setShowImage] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/45 bg-[rgba(246,248,252,0.72)] backdrop-blur-xl">
+    <>
+      <header className="sticky top-0 z-50 border-b border-white/45 bg-[rgba(246,248,252,0.72)] backdrop-blur-xl">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-        <a
-          href="#top"
-          className="group flex min-w-0 items-center gap-4 rounded-full border border-white/60 bg-white/55 px-3 py-2 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_46px_rgba(15,23,42,0.12)]"
-        >
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/70 bg-[radial-gradient(circle_at_30%_30%,#355f96,#10233f_70%)] text-sm font-semibold tracking-[0.2em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_10px_24px_rgba(15,23,42,0.18)]">
-            ST
-          </div>
+        <div className="group flex min-w-0 items-center gap-4 rounded-full border border-white/60 bg-white/55 px-3 py-2 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_46px_rgba(15,23,42,0.12)]">
+          <button
+            type="button"
+            className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-white/80 shadow-[0_12px_28px_rgba(15,23,42,0.18)] ring-4 ring-white/55 transition duration-300 hover:scale-[1.02]"
+            aria-label="Open profile image"
+            onClick={() => setShowImage(true)}
+          >
+            <img
+              src={profile.image}
+              alt={`${profile.name} headshot`}
+              className="h-full w-full object-cover"
+            />
+          </button>
 
           <div className="min-w-0">
-            <p className="truncate text-sm font-semibold tracking-tight text-slate-900">
+            <a href="#top" className="block truncate text-sm font-semibold tracking-tight text-slate-900">
               {profile.name}
-            </p>
+            </a>
             <p className="truncate text-[11px] text-slate-500">{profile.college}</p>
             <p className="truncate text-[11px] text-slate-500">
               {profile.major} • {profile.concentration}
             </p>
           </div>
-        </a>
+        </div>
 
         <button
           type="button"
@@ -80,6 +88,37 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </header>
+      </header>
+
+      {showImage && (
+        <div
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-slate-950/72 p-4 backdrop-blur-md"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Profile image preview"
+          onClick={() => setShowImage(false)}
+        >
+          <div
+            className="relative w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-3 shadow-[0_30px_80px_rgba(15,23,42,0.38)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute right-5 top-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/85 text-lg text-slate-700 shadow-lg transition hover:bg-white"
+              aria-label="Close image preview"
+              onClick={() => setShowImage(false)}
+            >
+              ×
+            </button>
+
+            <img
+              src={profile.image}
+              alt={`${profile.name} professional headshot`}
+              className="max-h-[82vh] w-full rounded-[1.4rem] object-contain bg-[#d8d0c7]"
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }

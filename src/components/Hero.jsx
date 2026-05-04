@@ -57,16 +57,6 @@ export default function Hero() {
       <div className="animate-fade-up-delayed">
         <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/55 p-3 shadow-[0_34px_70px_rgba(15,23,42,0.12)] backdrop-blur-xl">
           <div className="rounded-[1.5rem] border border-white/70 bg-[linear-gradient(180deg,#f7fafc,#edf3f8)] p-4">
-            <div className="mb-4 flex items-center justify-between rounded-[1.25rem] border border-white/65 bg-white/72 px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.06)]">
-              <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Digital Workspace</p>
-                <p className="mt-1 text-sm font-medium text-slate-700">{profile.role}</p>
-              </div>
-              <div className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-500">
-                Portfolio
-              </div>
-            </div>
-
             <BackgroundScene />
           </div>
         </div>
