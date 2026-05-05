@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section id="home" className="py-12 lg:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:items-start lg:gap-8">
+        <div>
 
           {/* Left Panel — Profile Image + Identity (navy) */}
           <div className="rounded-2xl bg-[#102948] p-6 text-white shadow-[0_8px_32px_rgba(15,23,42,0.18)] sm:p-7">
@@ -96,42 +96,6 @@ export default function Hero() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          {/* Right Panel — About Me (white) */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#102948]">About Me</p>
-            <h2 className="mt-3 text-2xl font-bold leading-snug tracking-tight text-slate-900 lg:text-3xl">
-              I build software that works and makes sense.
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-slate-600">{profile.summary}</p>
-
-            <div className="mt-6 grid grid-cols-2 gap-3">
-              {profile.stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3"
-                >
-                  <p className="text-xl font-bold text-slate-900">{stat.value}</p>
-                  <p className="mt-0.5 text-xs text-slate-500">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href="#projects"
-                className="inline-flex items-center justify-center rounded-full bg-[#102948] px-5 py-2.5 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#173f76]"
-              >
-                View My Work
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-900"
-              >
-                Get In Touch
-              </a>
             </div>
           </div>
 
