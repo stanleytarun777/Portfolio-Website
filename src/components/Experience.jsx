@@ -1,97 +1,92 @@
-import {
-  certifications,
-  education,
-  experiences,
-  networkingExperience,
-} from "../data/resume.js";
+import { experiences, networkingExperience } from "../data/resume.js";
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="rounded-[2.2rem] border border-white/75 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(244,247,251,0.84))] p-6 shadow-[0_28px_68px_rgba(15,23,42,0.08)] backdrop-blur-2xl lg:p-8"
-    >
-      <div className="max-w-3xl">
-        <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Experience</p>
-        <h2 className="mt-3 text-4xl font-semibold tracking-[-0.055em] text-slate-950 sm:text-[3rem]">
-          Education, work history, and technical exposure presented with clarity.
-        </h2>
-      </div>
+    <section id="experience" className="py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-      <div className="mt-8 grid gap-5 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
-        <div className="space-y-5">
-          <article className="rounded-[1.8rem] border border-white/80 bg-[linear-gradient(180deg,#102948,#163a68)] p-6 text-white shadow-[0_24px_54px_rgba(15,23,42,0.14)]">
-            <p className="text-xs uppercase tracking-[0.2em] text-white/58">Education</p>
-            <h3 className="mt-4 text-2xl font-semibold tracking-[-0.045em]">
-              {education.degree}
-            </h3>
-            <p className="mt-3 text-sm leading-7 text-white/74">{education.school}</p>
-            <p className="mt-4 text-sm font-medium text-white/86">{education.graduation}</p>
-          </article>
-
-          <article className="rounded-[1.8rem] border border-white/80 bg-white/82 p-6 shadow-[0_16px_36px_rgba(15,23,42,0.05)]">
-            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
-              Networking Experience
-            </p>
-            <div className="mt-5 space-y-3">
-              {networkingExperience.map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-[var(--navy)]/75" />
-                  <p className="text-sm leading-7 text-slate-600">{item}</p>
-                </div>
-              ))}
-            </div>
-          </article>
+        <div className="mb-12">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#102948]">
+            Work History
+          </span>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl">
+            Experience &amp; Highlights
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-8 text-slate-600">
+            The roles and work that shaped how I think about building, organizing, and solving problems.
+          </p>
         </div>
 
-        <div className="space-y-5">
-          {experiences.map((experience) => (
-            <article
-              key={experience.title}
-              className="rounded-[1.8rem] border border-white/80 bg-white/82 p-6 shadow-[0_16px_36px_rgba(15,23,42,0.05)]"
-            >
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <h3 className="text-2xl font-semibold tracking-[-0.04em] text-slate-950">
-                    {experience.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-slate-500">{experience.organization}</p>
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start">
+
+          {/* Left — Work Experience */}
+          <div className="space-y-5">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+              Work Experience
+            </p>
+
+            {experiences.map((exp) => (
+              <article
+                key={exp.title}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+              >
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900">{exp.title}</h3>
+                    <p className="mt-0.5 text-sm font-semibold text-[#102948]">
+                      {exp.organization}
+                    </p>
+                  </div>
+                  <span className="shrink-0 self-start rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600">
+                    {exp.timeframe}
+                  </span>
                 </div>
-                <p className="text-sm font-medium text-slate-700">{experience.timeframe}</p>
-              </div>
 
-              <div className="mt-5 space-y-3">
-                {experience.points.map((point) => (
-                  <div key={point} className="flex items-start gap-3">
-                    <span className="mt-2 h-2 w-2 rounded-full bg-slate-300" />
-                    <p className="text-sm leading-7 text-slate-600">{point}</p>
-                  </div>
+                <ul className="mt-5 space-y-2.5">
+                  {exp.points.map((point) => (
+                    <li key={point} className="flex items-start gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
+                      <p className="text-sm leading-7 text-slate-600">{point}</p>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+
+            {/* Data highlight card */}
+            <div className="rounded-2xl bg-[#102948] p-6 text-white shadow-[0_8px_32px_rgba(15,23,42,0.14)]">
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/50">
+                Data Highlight
+              </p>
+              <p className="mt-3 text-5xl font-bold tracking-tight text-white">40K+</p>
+              <p className="mt-2 text-sm leading-6 text-white/65">
+                Excel records cleaned and processed to support a catalog migration at the
+                Nicholls State University Library.
+              </p>
+            </div>
+          </div>
+
+          {/* Right — Networking & Systems Lab */}
+          <div className="space-y-5">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+              Networking &amp; Systems Lab
+            </p>
+
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-sm font-medium text-slate-500">
+                Hands-on lab work from coursework in network administration and systems.
+              </p>
+              <ul className="mt-5 space-y-3">
+                {networkingExperience.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#102948]" />
+                    <p className="text-sm leading-7 text-slate-600">{item}</p>
+                  </li>
                 ))}
-              </div>
-            </article>
-          ))}
-
-          <div className="grid gap-5 lg:grid-cols-[220px_minmax(0,1fr)]">
-            <article className="rounded-[1.8rem] border border-white/80 bg-[linear-gradient(180deg,#102948,#163a68)] p-6 text-white shadow-[0_24px_54px_rgba(15,23,42,0.14)]">
-              <p className="text-[11px] uppercase tracking-[0.2em] text-white/58">Highlight</p>
-              <p className="mt-3 text-4xl font-semibold tracking-[-0.05em]">40K+</p>
-              <p className="mt-2 text-sm leading-6 text-white/76">records processed and cleaned.</p>
-            </article>
-
-            <article className="rounded-[1.8rem] border border-white/80 bg-white/82 p-6 shadow-[0_16px_36px_rgba(15,23,42,0.05)]">
-              <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Certifications</p>
-              <div className="mt-4 flex flex-wrap gap-3">
-                {certifications.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-full border border-slate-200 bg-slate-50/90 px-4 py-2 text-sm text-slate-600"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
+              </ul>
             </article>
           </div>
+
         </div>
       </div>
     </section>

@@ -2,12 +2,12 @@ import { profile } from "../data/profile.js";
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 rounded-[1.8rem] border border-white/70 bg-[rgba(250,252,255,0.72)] px-5 py-4 text-sm text-slate-500 shadow-[0_18px_38px_rgba(15,23,42,0.05)] backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between">
-        <p>
-          © {new Date().getFullYear()} {profile.name}
-        </p>
-        <p>Open to software engineering internships · Spring / Summer 2026</p>
+    <footer className="bg-[#0a1d35] py-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-1.5 text-sm text-white/30 sm:flex-row sm:justify-between">
+          <p>&copy; {new Date().getFullYear()} {profile.name}</p>
+          <p>Open to software engineering internships &middot; Spring / Summer 2026</p>
+        </div>
       </div>
     </footer>
   );

@@ -1,139 +1,142 @@
-import { useState } from "react";
 import { profile } from "../data/profile.js";
 
-const metrics = [
-  "I build full-stack React apps",
-  "I've processed 40K+ real records",
-  "I hold two Meta certifications",
-];
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
+}
+
+function GitHubIcon() {
+  return (
+    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+      <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+    </svg>
+  );
+}
 
 export default function Hero() {
-  const [showImage, setShowImage] = useState(false);
-
   return (
-    <>
-      <section id="top" className="mx-auto w-full max-w-7xl px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pb-14 lg:pt-10">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-end lg:gap-10">
-          <div className="rounded-[2rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(246,249,252,0.88))] p-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
-            <div className="inline-flex items-center rounded-full border border-[rgba(16,41,77,0.08)] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-              Stanley Nyford
-            </div>
+    <section id="home" className="py-12 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-6 lg:grid-cols-[220px_minmax(0,1fr)_minmax(0,1.4fr)] lg:items-start lg:gap-8">
 
-            <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-[4.25rem]">
-              {profile.heroHeadline}
+          {/* Column 1 — Profile Image */}
+          <div className="flex justify-center lg:justify-start">
+            <div className="relative">
+              <img
+                src={profile.image}
+                alt={`${profile.name} professional headshot`}
+                className="h-52 w-52 rounded-2xl border-4 border-white object-cover shadow-[0_20px_60px_rgba(15,23,42,0.18)] lg:h-56 lg:w-56"
+              />
+              <span className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 shadow-sm">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                Available
+              </span>
+            </div>
+          </div>
+
+          {/* Column 2 — Profile Details */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 lg:text-[2.75rem]">
+              {profile.name}
             </h1>
+            <p className="mt-1.5 text-base font-semibold text-[#102948]">{profile.role}</p>
 
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-              {profile.heroDescription}
-            </p>
+            <div className="mt-5 space-y-3">
+              <div className="flex items-start gap-3">
+                <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+                <p className="text-sm leading-6 text-slate-600">{profile.college}</p>
+              </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#projects"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--navy)] px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_34px_rgba(13,35,70,0.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#173f76]"
-              >
-                View My Projects
-              </a>
-              <a
-                href={`mailto:${profile.email}`}
-                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-[0_12px_24px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950"
-              >
-                Email Me
-              </a>
+              <div className="flex items-start gap-3">
+                <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <p className="text-sm leading-6 text-slate-600">
+                  {profile.major} &mdash; {profile.concentration} Concentration
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="text-sm leading-6 text-slate-600">{profile.graduation}</p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <p className="text-sm leading-6 text-slate-600">{profile.location}</p>
+              </div>
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {metrics.map((metric) => (
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#0a66c2] px-4 py-2 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#004182]"
+              >
+                <LinkedInIcon />
+                LinkedIn
+              </a>
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-900"
+              >
+                <GitHubIcon />
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          {/* Column 3 — About Me */}
+          <div className="rounded-2xl bg-[#102948] p-6 text-white shadow-[0_8px_32px_rgba(15,23,42,0.18)]">
+            <p className="text-xs font-semibold uppercase tracking-widest text-white/50">About Me</p>
+            <h2 className="mt-3 text-xl font-bold leading-snug tracking-tight text-white lg:text-2xl">
+              I build software that works and makes sense.
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-white/75">{profile.summary}</p>
+
+            <div className="mt-6 grid grid-cols-2 gap-3">
+              {profile.stats.map((stat) => (
                 <div
-                  key={metric}
-                  className="rounded-[1.25rem] border border-slate-200/70 bg-white px-5 py-4"
+                  key={stat.label}
+                  className="rounded-xl border border-white/10 bg-white/8 px-4 py-3"
                 >
-                  <p className="text-sm font-medium leading-6 text-slate-700">{metric}</p>
+                  <p className="text-xl font-bold text-white">{stat.value}</p>
+                  <p className="mt-0.5 text-xs text-white/55">{stat.label}</p>
                 </div>
               ))}
             </div>
-          </div>
 
-          <div className="rounded-[2rem] border border-white/80 bg-[linear-gradient(180deg,#102948,#15365f)] p-5 text-white shadow-[0_24px_52px_rgba(15,23,42,0.14)] sm:p-6">
-            <div className="rounded-[1.65rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.1),rgba(255,255,255,0.04))] p-5 sm:p-6">
-              <div className="flex items-start justify-between gap-4">
-                <button
-                  type="button"
-                  aria-label="Open profile image"
-                  className="group relative h-24 w-24 overflow-hidden rounded-[1.8rem] border-4 border-white/90 shadow-[0_22px_40px_rgba(0,0,0,0.22)] transition duration-300 hover:-translate-y-1"
-                  onClick={() => setShowImage(true)}
-                >
-                  <img
-                    src={profile.image}
-                    alt={`${profile.name} professional headshot`}
-                    className="h-full w-full object-cover"
-                  />
-                </button>
-
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/60">
-                  {profile.graduation}
-                </p>
-              </div>
-
-              <div className="mt-6">
-                <p className="text-2xl font-semibold tracking-[-0.04em] text-white">
-                  {profile.name}
-                </p>
-                <p className="mt-2 text-sm font-medium text-white/76">{profile.role}</p>
-                <p className="mt-4 text-sm leading-7 text-white/72">
-                  {profile.college}
-                  <br />
-                  {profile.major} • {profile.concentration}
-                  <br />
-                  {profile.location}
-                </p>
-              </div>
-
-              <div className="mt-6 grid gap-3">
-                {profile.stats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="flex items-center justify-between rounded-[1.15rem] border border-white/10 bg-white/6 px-4 py-3"
-                  >
-                    <p className="text-sm text-white/64">{stat.label}</p>
-                    <p className="text-lg font-semibold text-white">{stat.value}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#102948] transition duration-200 hover:-translate-y-0.5 hover:shadow-md"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-white/15"
+              >
+                Get In Touch
+              </a>
             </div>
           </div>
-        </div>
-      </section>
 
-      {showImage && (
-        <div
-          className="fixed inset-0 z-[70] flex items-center justify-center bg-slate-950/72 p-4 backdrop-blur-md"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Profile image preview"
-          onClick={() => setShowImage(false)}
-        >
-          <div
-            className="relative w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-3 shadow-[0_30px_80px_rgba(15,23,42,0.38)]"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              className="absolute right-5 top-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-lg text-slate-700 shadow-lg transition hover:bg-white"
-              aria-label="Close image preview"
-              onClick={() => setShowImage(false)}
-            >
-              ×
-            </button>
-
-            <img
-              src={profile.image}
-              alt={`${profile.name} professional headshot`}
-              className="max-h-[82vh] w-full rounded-[1.4rem] object-contain bg-[#d8d0c7]"
-            />
-          </div>
         </div>
-      )}
-    </>
+      </div>
+    </section>
   );
 }
