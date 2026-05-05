@@ -10,9 +10,9 @@ import Footer from "./components/Footer.jsx";
 function App() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[var(--canvas)] text-slate-950">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.98),transparent_22%),linear-gradient(180deg,#f7f9fc_0%,#edf2f7_45%,#e9eef5_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-[linear-gradient(180deg,rgba(14,35,66,0.08),rgba(14,35,66,0))]" />
-      <div className="pointer-events-none absolute left-[-8rem] top-[22rem] h-[18rem] w-[18rem] rounded-full bg-[radial-gradient(circle,rgba(34,82,150,0.1),transparent_72%)] blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#f8fafc_0%,#eef2f6_52%,#e7edf5_100%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[22rem] bg-[linear-gradient(180deg,rgba(12,32,62,0.06),rgba(12,32,62,0))]" />
+      <div className="pointer-events-none absolute right-[-6rem] top-[16rem] h-[14rem] w-[14rem] rounded-full bg-[radial-gradient(circle,rgba(25,67,126,0.08),transparent_72%)] blur-3xl" />
 
       <Navbar />
 

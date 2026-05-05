@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 rounded-[1.8rem] border border-white/75 bg-[rgba(250,252,255,0.76)] px-4 py-3 shadow-[0_18px_42px_rgba(15,23,42,0.08)] backdrop-blur-2xl sm:px-5 lg:px-6">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 rounded-[1.45rem] border border-white/80 bg-[rgba(252,253,255,0.92)] px-4 py-3 shadow-[0_14px_30px_rgba(15,23,42,0.06)] backdrop-blur-xl sm:px-5 lg:px-6">
         <a href="#top" className="flex min-w-0 items-center gap-3">
           <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-white/95 shadow-[0_14px_24px_rgba(15,23,42,0.12)]">
             <img
@@ -61,11 +61,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      {open && (
-        <div
-          id="site-navigation"
-          className="mx-auto mt-3 w-full max-w-7xl rounded-[1.6rem] border border-white/75 bg-[rgba(250,252,255,0.9)] p-3 shadow-[0_18px_42px_rgba(15,23,42,0.08)] backdrop-blur-2xl md:hidden"
-        >
+        {open && (
+          <div
+            id="site-navigation"
+            className="mx-auto mt-3 w-full max-w-7xl rounded-[1.45rem] border border-white/75 bg-[rgba(252,253,255,0.96)] p-3 shadow-[0_14px_30px_rgba(15,23,42,0.06)] backdrop-blur-xl md:hidden"
+          >
           <div className="flex flex-col gap-1">
             {links.map((link) => (
               <a

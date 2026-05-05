@@ -3,8 +3,8 @@ import { profile } from "../data/profile.js";
 
 const metrics = [
   "Full-stack development",
-  "Network systems coursework",
-  "Recruiter-ready portfolio",
+  "Network systems foundation",
+  "Clean execution style",
 ];
 
 export default function Hero() {
@@ -14,12 +14,12 @@ export default function Hero() {
     <>
       <section id="top" className="mx-auto w-full max-w-7xl px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pb-14 lg:pt-10">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-end lg:gap-10">
-          <div className="rounded-[2.3rem] border border-white/75 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(244,247,251,0.82))] p-6 shadow-[0_28px_70px_rgba(15,23,42,0.1)] backdrop-blur-2xl sm:p-8 lg:p-10">
-            <div className="inline-flex items-center rounded-full border border-[rgba(16,41,77,0.1)] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 shadow-[0_10px_24px_rgba(15,23,42,0.05)]">
-              Premium Portfolio
+          <div className="rounded-[2rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(246,249,252,0.88))] p-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
+            <div className="inline-flex items-center rounded-full border border-[rgba(16,41,77,0.08)] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+              Software Portfolio
             </div>
 
-            <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.94] tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-[4.7rem]">
+            <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-[4.25rem]">
               {profile.heroHeadline}
             </h1>
 
@@ -46,7 +46,7 @@ export default function Hero() {
               {metrics.map((metric) => (
                 <div
                   key={metric}
-                  className="rounded-[1.5rem] border border-white/80 bg-white/72 px-5 py-4 shadow-[0_12px_28px_rgba(15,23,42,0.05)]"
+                  className="rounded-[1.25rem] border border-slate-200/70 bg-white px-5 py-4"
                 >
                   <p className="text-sm font-medium leading-6 text-slate-700">{metric}</p>
                 </div>
@@ -54,8 +54,8 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="rounded-[2.3rem] border border-white/75 bg-[linear-gradient(180deg,#102948,#163a68)] p-5 text-white shadow-[0_34px_82px_rgba(15,23,42,0.16)] sm:p-6">
-            <div className="rounded-[1.9rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.05))] p-5 backdrop-blur-xl sm:p-6">
+          <div className="rounded-[2rem] border border-white/80 bg-[linear-gradient(180deg,#102948,#15365f)] p-5 text-white shadow-[0_24px_52px_rgba(15,23,42,0.14)] sm:p-6">
+            <div className="rounded-[1.65rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.1),rgba(255,255,255,0.04))] p-5 sm:p-6">
               <div className="flex items-start justify-between gap-4">
                 <button
                   type="button"
@@ -70,9 +70,9 @@ export default function Hero() {
                   />
                 </button>
 
-                <div className="rounded-full border border-white/12 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-white/72">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/60">
                   {profile.graduation}
-                </div>
+                </p>
               </div>
 
               <div className="mt-6">
@@ -93,7 +93,7 @@ export default function Hero() {
                 {profile.stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="flex items-center justify-between rounded-[1.35rem] border border-white/10 bg-white/8 px-4 py-3"
+                    className="flex items-center justify-between rounded-[1.15rem] border border-white/10 bg-white/6 px-4 py-3"
                   >
                     <p className="text-sm text-white/64">{stat.label}</p>
                     <p className="text-lg font-semibold text-white">{stat.value}</p>
