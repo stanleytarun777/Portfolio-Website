@@ -1,12 +1,11 @@
 export const projects = [
   {
     title: "DuelyDo",
-    category: "Featured Project",
     summary:
       "A productivity platform that converts course syllabi into an organized semester plan — pulling assignments and deadlines into a centralized dashboard in under 60 seconds.",
     problem:
       "Students waste hours manually tracking assignments and deadlines from multiple syllabi. I built DuelyDo to eliminate that friction — one upload, everything organized and visible in one place.",
-    stack: ["React", "JavaScript", "Supabase", "HTML", "CSS", "Vercel"],
+    stack: ["React", "JavaScript","Python", "Supabase", "Vercel"],
     highlights: [
       "Parses course syllabi and populates a structured task dashboard in under 60 seconds.",
       "Extracts professor contact information, office location, office hours, and class meeting times automatically.",
@@ -18,7 +17,7 @@ export const projects = [
   },
   {
     title: "Portfolio Website",
-    category: "Personal Brand",
+
     summary:
       "A responsive portfolio site I designed and built from scratch to present my work, experience, and technical background clearly to recruiters and collaborators.",
     problem:
@@ -34,7 +33,6 @@ export const projects = [
   },
   {
     title: "Web Calculator",
-    category: "JavaScript Foundations",
     summary:
       "A responsive calculator app handling real-time arithmetic, multi-operation chaining, and edge-case input flows — built entirely in vanilla JavaScript without any external libraries.",
     problem:
