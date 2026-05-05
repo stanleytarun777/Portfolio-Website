@@ -6,7 +6,7 @@ export const skillGroups = [
       "JavaScript",
       "HTML",
       "CSS",
-      "Tailwind CSS",
+      "CSS",
       "Node.js",
       "Python",
       "REST APIs",
