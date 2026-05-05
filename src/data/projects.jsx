@@ -9,6 +9,7 @@ export const projects = [
     stack: ["React", "JavaScript", "Supabase", "HTML", "CSS", "Vercel"],
     highlights: [
       "Parses course syllabi and populates a structured task dashboard in under 60 seconds.",
+      "Extracts professor contact information, office location, office hours, and class meeting times automatically.",
       "Supabase-powered authentication, persistent storage, and cross-session state management.",
       "Single focused view for all coursework — assignments, deadlines, and progress tracking in one interface.",
     ],
