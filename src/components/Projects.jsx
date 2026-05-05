@@ -23,12 +23,12 @@ function ProjectCard({ project }) {
       <div className="h-1 w-full rounded-t-2xl bg-gradient-to-r from-[#102948] to-[#1e4d8c]" />
 
       <div className="flex flex-1 flex-col p-5 sm:p-6">
-        {/* Category badge + action buttons */}
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="inline-flex rounded-full border border-[rgba(16,41,72,0.14)] bg-[rgba(16,41,72,0.06)] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#102948]">
-            {project.category}
-          </span>
-          <div className="flex shrink-0 gap-2">
+        {/* Title + action buttons */}
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+            {project.title}
+          </h3>
+          <div className="flex shrink-0 gap-2 pt-0.5">
             <a
               href={project.githubUrl}
               target="_blank"
@@ -50,13 +50,8 @@ function ProjectCard({ project }) {
           </div>
         </div>
 
-        {/* Title */}
-        <h3 className="mt-4 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
-          {project.title}
-        </h3>
-
         {/* Summary */}
-        <p className="mt-2.5 text-sm leading-7 text-slate-600">{project.summary}</p>
+        <p className="mt-3 text-sm leading-7 text-slate-600">{project.summary}</p>
 
         {/* Problem it solves */}
         <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
