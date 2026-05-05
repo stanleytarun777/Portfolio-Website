@@ -74,7 +74,7 @@ export default function Hero() {
 
                 {/* Right col: name + detail rows */}
                 <div className="min-w-0 flex-1">
-                  <h1 className="text-lg font-bold tracking-tight text-white sm:text-xl lg:text-2xl">
+                  <h1 className="whitespace-nowrap text-lg font-bold tracking-tight text-white sm:text-xl lg:text-2xl">
                     {profile.name}
                   </h1>
                   <div className="mt-3 space-y-2.5">

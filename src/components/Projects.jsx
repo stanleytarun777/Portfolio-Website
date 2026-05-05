@@ -103,11 +103,7 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         <div className="mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[rgba(16,41,72,0.07)] px-3 py-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#102948]" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#102948]">Selected Work</span>
-          </div>
-          <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
             Projects I've built
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
