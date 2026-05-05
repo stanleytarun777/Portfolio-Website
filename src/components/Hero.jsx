@@ -1,4 +1,5 @@
 import { profile } from "../data/profile.js";
+import { education, certifications } from "../data/resume.js";
 
 function LinkedInIcon() {
   return (
@@ -20,20 +21,18 @@ export default function Hero() {
   return (
     <section id="home" className="py-12 lg:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div>
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:items-start lg:gap-8">
 
-          {/* Left Panel — Profile Image + Identity (navy) */}
+          {/* Left — Navy Identity Panel */}
           <div className="rounded-2xl bg-[#102948] p-6 text-white shadow-[0_8px_32px_rgba(15,23,42,0.18)] sm:p-7">
             <div className="flex items-stretch gap-5">
 
-              {/* Image */}
               <img
                 src={profile.image}
                 alt={`${profile.name} professional headshot`}
                 className="w-36 shrink-0 rounded-2xl border-4 border-white/20 object-cover shadow-[0_12px_32px_rgba(0,0,0,0.28)]"
               />
 
-              {/* Identity + Details */}
               <div className="min-w-0 flex-1">
                 <h1 className="text-xl font-bold tracking-tight text-white lg:text-2xl">
                   {profile.name}
@@ -47,7 +46,6 @@ export default function Hero() {
                     </svg>
                     <p className="text-xs leading-5 text-white/70">{profile.college}</p>
                   </div>
-
                   <div className="flex items-start gap-2.5">
                     <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -56,14 +54,12 @@ export default function Hero() {
                       {profile.major} &mdash; {profile.concentration} Concentration
                     </p>
                   </div>
-
                   <div className="flex items-start gap-2.5">
                     <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     <p className="text-xs leading-5 text-white/70">{profile.graduation}</p>
                   </div>
-
                   <div className="flex items-start gap-2.5">
                     <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -73,7 +69,6 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* Links */}
                 <div className="mt-5 flex flex-wrap gap-2.5">
                   <a
                     href={profile.linkedin}
@@ -95,8 +90,73 @@ export default function Hero() {
                   </a>
                 </div>
               </div>
-
             </div>
+          </div>
+
+          {/* Right — About Me + Education + Certs */}
+          <div id="about" className="flex flex-col gap-5">
+
+            {/* About Me text */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#102948]">About Me</p>
+              <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900">
+                A bit more about me
+              </h2>
+              <div className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+                <p>
+                  I am a Computer Information Systems (CIS) major with a concentration in Computer
+                  Science, pursuing opportunities in software engineering, web development, and
+                  technology roles. My academic background blends technical programming skills with
+                  a strong understanding of business systems and information technology, allowing me
+                  to approach software development from both a technical and organizational
+                  perspective.
+                </p>
+                <p>
+                  I have hands-on experience developing responsive, modern web applications and
+                  websites using HTML, CSS, JavaScript, and React. Recently, I developed a
+                  full-stack task management application (TaskFlow) using React for the frontend
+                  and Supabase for backend data handling, featuring authentication, task tracking,
+                  analytics, and a responsive dashboard. You can find the GitHub repository and
+                  live demo under Projects below. I focus on writing maintainable code while
+                  enjoying turning ideas into functional solutions.
+                </p>
+                <p>
+                  Through coursework, independent projects, and practical experience, I have
+                  developed a solid foundation in software development principles, debugging,
+                  version control, and systems thinking. I am currently seeking a Software
+                  Engineering, Web Development, or IT internship where I can apply my skills,
+                  gain real-world experience, and contribute meaningfully to team projects. I am
+                  motivated, adaptable, and committed to growing into a well-rounded professional.
+                </p>
+              </div>
+            </div>
+
+            {/* Education + Certs row */}
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div className="rounded-2xl bg-[#102948] p-6 text-white shadow-[0_8px_32px_rgba(15,23,42,0.14)]">
+                <p className="text-xs font-semibold uppercase tracking-widest text-white/50">Education</p>
+                <h3 className="mt-3 text-base font-bold leading-snug text-white">{education.degree}</h3>
+                <p className="mt-2 text-sm text-white/65">{education.school}</p>
+                <span className="mt-4 inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white/85">
+                  {education.graduation}
+                </span>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">Certifications</p>
+                <div className="mt-4 space-y-3">
+                  {certifications.map((cert) => (
+                    <div key={cert} className="flex items-start gap-3">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(16,41,72,0.08)] text-[10px] font-bold text-[#102948]">
+                        ✓
+                      </span>
+                      <p className="text-sm leading-6 text-slate-700">{cert}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
