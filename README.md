@@ -1,6 +1,6 @@
 # Stanley Nyford — Portfolio Website
 
-A fully responsive personal portfolio built with **React 19** and plain **CSS** — no UI frameworks or component libraries.
+A fully responsive personal portfolio built with **React 19** and plain **CSS** — no UI component libraries.
 
 **Live site:** [portfolio-website-seven-rho-x975x5bbq6.vercel.app](https://portfolio-website-seven-rho-x975x5bbq6.vercel.app/)  
 **GitHub:** [github.com/stanleytarun777/Portfolio-Website](https://github.com/stanleytarun777/Portfolio-Website)
@@ -29,8 +29,8 @@ A fully responsive personal portfolio built with **React 19** and plain **CSS** 
 | Tool | Version | Role |
 |---|---|---|
 | ESLint | 9.39.1 | Static code analysis |
-| eslint-plugin-react-hooks | latest | Enforces Rules of Hooks |
-| eslint-plugin-react-refresh | latest | Ensures components are HMR-safe |
+| eslint-plugin-react-hooks | 7.x | Enforces Rules of Hooks |
+| eslint-plugin-react-refresh | 0.4.x | Ensures components are HMR-safe |
 | Node.js | 24.x | Runtime |
 | npm | 11.x | Package manager |
 
@@ -64,7 +64,7 @@ src/
 │
 ├── App.jsx         ← Root layout
 ├── main.jsx        ← React DOM entry point
-└── index.css       ← All styles (885 lines)
+└── index.css       ← All styles (894 lines)
 ```
 
 **Module system:** ES Modules throughout (`"type": "module"` in `package.json`).  
@@ -75,7 +75,7 @@ src/
 
 ## CSS Design System
 
-All styles are in a single `src/index.css` file (885 lines).
+All styles are in a single `src/index.css` file (894 lines).
 
 ### Custom Properties (Design Tokens)
 ```css
@@ -123,7 +123,6 @@ portfolio/
 ├── public/
 │   └── headshot.png               # Profile photo (replace to update)
 ├── src/
-│   ├── assets/                    # Static assets (Vite-managed)
 │   ├── components/
 │   │   ├── Navbar.jsx
 │   │   ├── Hero.jsx
