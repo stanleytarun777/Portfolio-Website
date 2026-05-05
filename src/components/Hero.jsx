@@ -42,7 +42,7 @@ export default function Hero() {
               <img
                 src={profile.image}
                 alt={`${profile.name} professional headshot`}
-                className="h-56 w-full rounded-xl border-4 border-white/20 object-cover object-top shadow-[0_12px_32px_rgba(0,0,0,0.3)] sm:h-auto sm:w-32 sm:rounded-2xl md:w-36"
+                className="w-full rounded-xl border-4 border-white/20 object-contain shadow-[0_12px_32px_rgba(0,0,0,0.3)] sm:w-36 sm:rounded-2xl md:w-40"
               />
 
               <div className="min-w-0 flex-1">
