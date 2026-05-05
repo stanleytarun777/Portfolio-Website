@@ -13,25 +13,8 @@ export const projects = [
       "Reduced manual planning effort by centralizing assignments, deadlines, and productivity tracking in one interface.",
     ],
     githubUrl: "https://github.com/stanleytarun777/TaskFlow-Lane.git",
-    liveUrl: "https://task-flow-lane.vercel.app/",
+    liveUrl: "https://duely-nine.vercel.app/",
     ctaLabel: "View Project",
-  },
-  {
-    title: "TaskFlow Lane",
-    category: "Project",
-    summary:
-      "A full-stack task management application built to support authentication, task tracking, analytics, and a responsive dashboard experience.",
-    caption:
-      "Structured as a recruiter-friendly example of frontend execution paired with database-backed product functionality.",
-    stack: ["React", "JavaScript", "Supabase", "Analytics", "Responsive UI"],
-    highlights: [
-      "Created a dashboard-oriented interface designed for clear task visibility and day-to-day usability.",
-      "Used Supabase to support authentication and persistent data behavior across the application.",
-      "Focused on clean structure, maintainable components, and a responsive user experience.",
-    ],
-    githubUrl: "https://github.com/stanleytarun777/TaskFlow-Lane.git",
-    liveUrl: "https://task-flow-lane.vercel.app/",
-    ctaLabel: "Learn More",
   },
   {
     title: "Portfolio Website",

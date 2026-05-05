@@ -1,6 +1,6 @@
 export const profile = {
-  name: "Stanley Taru",
-  role: "Software Engineering / IT Intern Candidate",
+  name: "Stanley Nyford",
+  role: "SWE Intern",
   college: "Nicholls State University",
   major: "Computer Information Systems",
   concentration: "Computer Science concentration",
