@@ -20,7 +20,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-white/70 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                className="rounded-full px-4 py-2 text-sm font-bold text-white transition-colors duration-200 hover:bg-white/10"
               >
                 {link.label}
               </a>
@@ -51,7 +51,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="block rounded-xl px-4 py-3 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+              className="block rounded-xl px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-white/10"
               onClick={() => setOpen(false)}
             >
               {link.label}
