@@ -1,15 +1,22 @@
 export const skillGroups = [
   {
-    title: "Frontend",
-    skills: ["React", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
-  },
-  {
-    title: "Backend",
-    skills: ["Node.js", "Python", "REST APIs"],
-  },
-  {
-    title: "Database",
-    skills: ["SQL", "Supabase"],
+    title: "Technical Skills",
+    skills: [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Node.js",
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Supabase",
+      "Git / GitHub",
+      "Google Workspace",
+      "Excel",
+      "Vercel",
+    ],
   },
   {
     title: "Networking",
@@ -21,9 +28,5 @@ export const skillGroups = [
       "Network Troubleshooting",
       "Basic Network Security",
     ],
-  },
-  {
-    title: "Tools",
-    skills: ["Git / GitHub", "Google Workspace", "Excel", "Vercel"],
   },
 ];
