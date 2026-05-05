@@ -1,42 +1,37 @@
 export default function ProjectCard({ project }) {
   return (
-    <article className="group flex h-full flex-col rounded-[1.75rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(244,247,251,0.82))] p-5 shadow-[0_18px_40px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_28px_56px_rgba(15,23,42,0.12)]">
-      <div className="flex items-center justify-between gap-4">
-        <span className="rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-slate-500">
-          {project.category}
-        </span>
-        <span className="h-2.5 w-2.5 rounded-full bg-[var(--navy)]/85 shadow-[0_0_0_8px_rgba(18,58,114,0.08)]" />
+    <article className="project-card">
+      <div className="project-card-header">
+        <span className="project-category">{project.category}</span>
+        <span className="project-accent-dot" />
       </div>
 
-      <h3 className="mt-5 text-2xl font-semibold tracking-[-0.03em] text-slate-950">{project.title}</h3>
-      <p className="mt-4 text-sm leading-7 text-slate-600">{project.summary}</p>
+      <h3 className="project-title">{project.title}</h3>
+      <p className="project-summary">{project.summary}</p>
 
-      <div className="mt-5 flex flex-wrap gap-2">
+      <div className="project-stack">
         {project.stack.map((item) => (
-          <span
-            key={item}
-            className="rounded-full border border-slate-200/90 bg-[rgba(248,250,252,0.9)] px-3 py-1.5 text-xs font-medium text-slate-600"
-          >
+          <span key={item} className="project-stack-pill">
             {item}
           </span>
         ))}
       </div>
 
-      <div className="mt-6 space-y-3">
+      <div className="project-highlights">
         {project.highlights.map((highlight) => (
-          <div key={highlight} className="flex items-start gap-3">
-            <span className="mt-2 h-2 w-2 rounded-full bg-slate-300" />
-            <p className="text-sm leading-7 text-slate-600">{highlight}</p>
+          <div key={highlight} className="project-highlight">
+            <span className="project-highlight-dot" />
+            <p className="project-highlight-text">{highlight}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-auto flex gap-3 pt-8">
+      <div className="project-actions">
         <a
           href={project.githubUrl}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center rounded-full border border-slate-200 bg-white/75 px-4 py-2 text-sm font-semibold text-slate-700 transition duration-300 hover:border-slate-300 hover:bg-white hover:text-slate-950"
+          className="button button-tertiary"
         >
           GitHub
         </a>
@@ -44,7 +39,7 @@ export default function ProjectCard({ project }) {
           href={project.liveUrl}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center rounded-full bg-[var(--navy)] px-4 py-2 text-sm font-semibold text-white shadow-[0_16px_28px_rgba(13,35,70,0.22)] transition duration-300 hover:bg-[#163e73]"
+          className="button button-primary"
         >
           Live Demo
         </a>
