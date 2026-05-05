@@ -39,34 +39,24 @@ export default function Hero() {
 
             {/* Navy Identity Card */}
             <div className="rounded-2xl bg-[#102948] p-5 text-white shadow-[0_8px_40px_rgba(15,23,42,0.2)] sm:p-6">
+
+              {/* Top row: image + details side by side */}
               <div className="flex items-start gap-4 sm:gap-5">
 
-                {/* Image + social buttons stacked */}
-                <div className="flex shrink-0 flex-col items-stretch gap-2.5">
+                {/* Clickable profile image */}
+                <a
+                  href={profile.image}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="shrink-0 cursor-zoom-in"
+                  title="View full photo"
+                >
                   <img
                     src={profile.image}
                     alt={`${profile.name} professional headshot`}
-                    className="w-24 rounded-xl border-4 border-white/20 object-contain shadow-[0_8px_24px_rgba(0,0,0,0.35)] sm:w-28 md:w-32"
+                    className="w-32 rounded-xl border-4 border-white/20 object-contain shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition duration-200 hover:opacity-90 sm:w-36 md:w-40"
                   />
-                  <a
-                    href={profile.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-center gap-1.5 rounded-full bg-[#0a66c2] py-2 text-xs font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#004182]"
-                  >
-                    <LinkedInIcon />
-                    LinkedIn
-                  </a>
-                  <a
-                    href={profile.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-center gap-1.5 rounded-full border border-white/20 bg-white/10 py-2 text-xs font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-white/15"
-                  >
-                    <GitHubIcon />
-                    GitHub
-                  </a>
-                </div>
+                </a>
 
                 {/* Name + detail rows */}
                 <div className="min-w-0 flex-1">
@@ -93,6 +83,29 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
+
+              {/* Bottom row: LinkedIn + GitHub full width, one line */}
+              <div className="mt-4 flex gap-2.5">
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-1 items-center justify-center gap-1.5 rounded-full bg-[#0a66c2] py-2.5 text-xs font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#004182]"
+                >
+                  <LinkedInIcon />
+                  LinkedIn
+                </a>
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-white/20 bg-white/10 py-2.5 text-xs font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-white/15"
+                >
+                  <GitHubIcon />
+                  GitHub
+                </a>
+              </div>
+
             </div>
 
             {/* Certifications card */}
