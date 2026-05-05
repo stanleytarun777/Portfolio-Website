@@ -7,7 +7,7 @@ import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="app">
       <Navbar />
       <main>
         <Hero />

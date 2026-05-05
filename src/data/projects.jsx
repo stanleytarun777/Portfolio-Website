@@ -13,7 +13,7 @@ export const projects = [
       "Supabase-powered authentication, persistent storage, and cross-session state management.",
       "Single focused view for all coursework — assignments, deadlines, and progress tracking in one interface.",
     ],
-    githubUrl: "https://github.com/stanleytarun777/TaskFlow-Lane.git",
+    githubUrl: "https://github.com/stanleytarun777/DuelyDo_Public_Showcase",
     liveUrl: "https://duely-nine.vercel.app/",
   },
   {
@@ -23,7 +23,7 @@ export const projects = [
       "A responsive portfolio site I designed and built from scratch to present my work, experience, and technical background clearly to recruiters and collaborators.",
     problem:
       "I needed a professional online presence that felt personal and polished — not a generic template. Something that shows how I think and what I can actually build.",
-    stack: ["React", "JavaScript", "Tailwind CSS", "Vercel"],
+    stack: ["React", "JavaScript", "CSS", "Vercel"],
     highlights: [
       "Fully responsive layout, clean and readable across all screen sizes.",
       "Modular component structure — each section is independent and easy to update.",
