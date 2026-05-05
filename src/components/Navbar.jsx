@@ -11,56 +11,33 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [showImage, setShowImage] = useState(false);
 
   return (
-    <>
-      <header className="sticky top-0 z-50 border-b border-white/50 bg-[rgba(245,248,252,0.74)] backdrop-blur-2xl">
-        <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-4 rounded-[1.75rem] border border-white/75 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(244,247,251,0.8))] px-4 py-3 shadow-[0_20px_46px_rgba(15,23,42,0.1)] backdrop-blur-xl">
-            <button
-              type="button"
-              aria-label="Open profile image"
-              className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-white/90 shadow-[0_16px_28px_rgba(15,23,42,0.18)] ring-4 ring-white/70 transition duration-300 hover:scale-[1.02]"
-              onClick={() => setShowImage(true)}
-            >
+    <header className="sticky top-0 z-40 mt-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl rounded-[1.7rem] border border-white/70 bg-[rgba(250,252,255,0.78)] shadow-[0_22px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl">
+        <nav className="flex items-center justify-between gap-4 px-4 py-3 sm:px-5 lg:px-6">
+          <a href="#top" className="flex min-w-0 items-center gap-3">
+            <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-white/90 shadow-[0_14px_24px_rgba(15,23,42,0.12)]">
               <img
                 src={profile.image}
                 alt={`${profile.name} headshot`}
                 className="h-full w-full object-cover"
               />
-            </button>
-
+            </div>
             <div className="min-w-0">
-              <div className="flex items-center gap-2">
-                <a
-                  href="#top"
-                  className="block truncate text-lg font-semibold tracking-tight text-slate-950"
-                >
-                  {profile.name}
-                </a>
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[var(--navy)] text-[10px] font-semibold text-white shadow-[0_6px_14px_rgba(18,58,114,0.24)]">
-                  ✓
-                </span>
-              </div>
-              <a
-                href="#about"
-                className="mt-1 block truncate text-sm font-medium text-slate-500"
-              >
-                {profile.college}
-              </a>
-              <p className="mt-1 truncate text-xs text-slate-500">
-                {profile.major} • {profile.concentration}
+              <p className="truncate text-sm font-semibold text-slate-950">{profile.name}</p>
+              <p className="truncate text-xs text-slate-500">
+                {profile.college} • {profile.major}
               </p>
             </div>
-          </div>
+          </a>
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/85 text-slate-700 shadow-sm md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-700 shadow-sm md:hidden"
             aria-expanded={open}
-            aria-controls="primary-navigation"
-            aria-label="Toggle navigation"
+            aria-controls="profile-tabs"
+            aria-label="Toggle profile navigation"
             onClick={() => setOpen((value) => !value)}
           >
             <span className="space-y-1">
@@ -75,7 +52,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition duration-300 hover:bg-white/80 hover:text-slate-950"
+                className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition duration-300 hover:bg-white hover:text-slate-950"
               >
                 {link.label}
               </a>
@@ -84,16 +61,13 @@ export default function Navbar() {
         </nav>
 
         {open && (
-          <div
-            id="primary-navigation"
-            className="mx-4 mb-4 rounded-[1.75rem] border border-white/70 bg-white/85 p-3 shadow-[0_20px_50px_rgba(15,23,42,0.12)] backdrop-blur-2xl md:hidden"
-          >
-            <div className="flex flex-col gap-1">
+          <div id="profile-tabs" className="border-t border-slate-200/80 px-3 pb-3 md:hidden">
+            <div className="flex flex-col gap-1 pt-3">
               {links.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition duration-300 hover:bg-slate-100/80 hover:text-slate-950"
+                  className="rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition duration-300 hover:bg-white hover:text-slate-950"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
@@ -102,37 +76,7 @@ export default function Navbar() {
             </div>
           </div>
         )}
-      </header>
-
-      {showImage && (
-        <div
-          className="fixed inset-0 z-[70] flex items-center justify-center bg-slate-950/72 p-4 backdrop-blur-md"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Profile image preview"
-          onClick={() => setShowImage(false)}
-        >
-          <div
-            className="relative w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-3 shadow-[0_30px_80px_rgba(15,23,42,0.38)]"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              className="absolute right-5 top-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-lg text-slate-700 shadow-lg transition hover:bg-white"
-              aria-label="Close image preview"
-              onClick={() => setShowImage(false)}
-            >
-              ×
-            </button>
-
-            <img
-              src={profile.image}
-              alt={`${profile.name} professional headshot`}
-              className="max-h-[82vh] w-full rounded-[1.4rem] object-contain bg-[#d8d0c7]"
-            />
-          </div>
-        </div>
-      )}
-    </>
+      </div>
+    </header>
   );
 }
