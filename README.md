@@ -1,6 +1,6 @@
 # Stanley Nyford — Portfolio Website
 
-A fully responsive personal portfolio built with **React 19** and **hand-written CSS** — no UI frameworks, no component libraries, no utility-class systems. Every layout, animation, and style rule is authored from scratch to demonstrate genuine front-end competency.
+A fully responsive personal portfolio built with **React 19** and plain **CSS** — no UI frameworks or component libraries.
 
 **Live site:** [portfolio-website-seven-rho-x975x5bbq6.vercel.app](https://portfolio-website-seven-rho-x975x5bbq6.vercel.app/)  
 **GitHub:** [github.com/stanleytarun777/Portfolio-Website](https://github.com/stanleytarun777/Portfolio-Website)
@@ -14,7 +14,7 @@ A fully responsive personal portfolio built with **React 19** and **hand-written
 |---|---|
 | JavaScript (ES2020+) | All application logic, component behavior, data |
 | JSX | React component templating |
-| CSS3 | All styling — hand-written, zero dependencies |
+| CSS3 | All styling — custom properties, grid, flex, media queries |
 | HTML5 | Entry point (`index.html`), semantic document structure |
 
 ### Frameworks & Libraries
@@ -69,13 +69,13 @@ src/
 
 **Module system:** ES Modules throughout (`"type": "module"` in `package.json`).  
 **State:** Component-local only (`useState` for mobile nav toggle). No global state library needed.  
-**Icons:** Inline SVG — no icon library. LinkedIn, GitHub, Email, skill category, and UI icons are hand-coded SVG paths.
+**Icons:** Inline SVG for LinkedIn, GitHub, Email, skill category, and UI icons.
 
 ---
 
 ## CSS Design System
 
-All styles are in a single `src/index.css` file (885 lines). No preprocessor, no framework.
+All styles are in a single `src/index.css` file (885 lines).
 
 ### Custom Properties (Design Tokens)
 ```css
@@ -98,7 +98,7 @@ All styles are in a single `src/index.css` file (885 lines). No preprocessor, no
 ### Layout Techniques
 - **CSS Grid** — hero two-column layout, projects card grid, skills card grid
 - **CSS Flexbox** — navbar, identity card row, social buttons, pill groups, contact buttons
-- **CSS Custom Properties** — entire color palette driven by tokens, no magic numbers in component styles
+- **CSS Custom Properties** — color palette defined as tokens in `:root`, used across all component styles
 
 ### Responsive Breakpoints
 | Breakpoint | Behavior |
@@ -168,7 +168,7 @@ portfolio/
 ### Performance
 - Profile image uses `fetchpriority="high"`, `loading="eager"`, and `decoding="async"` to avoid render-blocking
 - Production bundle: **~212 KB JS** (66 KB gzip) · **~12 KB CSS** (2.7 KB gzip)
-- Zero third-party CSS or icon libraries — nothing to fetch beyond the app bundle
+- No third-party CSS or icon libraries in the bundle
 
 ---
 
@@ -185,7 +185,7 @@ Converts uploaded course syllabi into an organized semester plan in under 60 sec
 ---
 
 ### Portfolio Website — This Site
-Designed and built from scratch. No templates, no UI kits.
+A responsive portfolio site built with React and plain CSS.
 
 - **Stack:** React · JavaScript · CSS · Vercel
 - **Repo:** [Portfolio-Website](https://github.com/stanleytarun777/Portfolio-Website)
@@ -194,7 +194,7 @@ Designed and built from scratch. No templates, no UI kits.
 ---
 
 ### Web Calculator — Vanilla JS Exercise
-Full arithmetic flow with real-time display, chained operations, and edge-case handling — zero external dependencies.
+A responsive calculator app with real-time display, chained operations, and edge-case handling built in vanilla JavaScript.
 
 - **Stack:** JavaScript · HTML · CSS
 - **Repo:** [Web-Calculator](https://github.com/stanleytarun777/Web-Calculator)
