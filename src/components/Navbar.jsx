@@ -17,11 +17,11 @@ export default function Navbar() {
     <>
       <header className="sticky top-0 z-50 border-b border-white/50 bg-[rgba(245,248,252,0.74)] backdrop-blur-2xl">
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-4 rounded-full border border-white/70 bg-white/70 px-3 py-2 shadow-[0_18px_42px_rgba(15,23,42,0.08)]">
+          <div className="flex min-w-0 items-center gap-4 rounded-[1.75rem] border border-white/75 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(244,247,251,0.8))] px-4 py-3 shadow-[0_20px_46px_rgba(15,23,42,0.1)] backdrop-blur-xl">
             <button
               type="button"
               aria-label="Open profile image"
-              className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-white/80 shadow-[0_14px_24px_rgba(15,23,42,0.18)] ring-4 ring-white/60 transition duration-300 hover:scale-[1.02]"
+              className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-white/90 shadow-[0_16px_28px_rgba(15,23,42,0.18)] ring-4 ring-white/70 transition duration-300 hover:scale-[1.02]"
               onClick={() => setShowImage(true)}
             >
               <img
@@ -32,14 +32,24 @@ export default function Navbar() {
             </button>
 
             <div className="min-w-0">
+              <div className="flex items-center gap-2">
+                <a
+                  href="#top"
+                  className="block truncate text-lg font-semibold tracking-tight text-slate-950"
+                >
+                  {profile.name}
+                </a>
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[var(--navy)] text-[10px] font-semibold text-white shadow-[0_6px_14px_rgba(18,58,114,0.24)]">
+                  ✓
+                </span>
+              </div>
               <a
-                href="#top"
-                className="block truncate text-base font-semibold tracking-tight text-slate-950"
+                href="#about"
+                className="mt-1 block truncate text-sm font-medium text-slate-500"
               >
-                {profile.name}
+                {profile.college}
               </a>
-              <p className="truncate text-sm text-slate-500">{profile.college}</p>
-              <p className="truncate text-xs text-slate-500">
+              <p className="mt-1 truncate text-xs text-slate-500">
                 {profile.major} • {profile.concentration}
               </p>
             </div>
