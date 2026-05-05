@@ -12,7 +12,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#102948] shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
@@ -20,7 +20,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-slate-900"
+                className="rounded-full px-4 py-2 text-sm font-medium text-white/70 transition-colors duration-200 hover:bg-white/10 hover:text-white"
               >
                 {link.label}
               </a>
@@ -29,7 +29,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm"
+            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white shadow-sm"
             aria-expanded={open}
             aria-label="Toggle navigation"
             onClick={() => setOpen((v) => !v)}
@@ -46,12 +46,12 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-slate-100 bg-white px-4 pb-4 pt-2">
+        <div className="md:hidden border-t border-white/10 bg-[#102948] px-4 pb-4 pt-2">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-slate-900"
+              className="block rounded-xl px-4 py-3 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white"
               onClick={() => setOpen(false)}
             >
               {link.label}
