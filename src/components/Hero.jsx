@@ -24,13 +24,13 @@ export default function Hero() {
 
           {/* Left Panel — Profile Image + Identity (navy) */}
           <div className="rounded-2xl bg-[#102948] p-6 text-white shadow-[0_8px_32px_rgba(15,23,42,0.18)] sm:p-7">
-            <div className="flex items-start gap-5">
+            <div className="flex items-stretch gap-5">
 
               {/* Image */}
               <img
                 src={profile.image}
                 alt={`${profile.name} professional headshot`}
-                className="h-36 w-36 shrink-0 rounded-2xl border-4 border-white/20 object-cover shadow-[0_12px_32px_rgba(0,0,0,0.28)]"
+                className="w-36 shrink-0 rounded-2xl border-4 border-white/20 object-cover shadow-[0_12px_32px_rgba(0,0,0,0.28)]"
               />
 
               {/* Identity + Details */}
