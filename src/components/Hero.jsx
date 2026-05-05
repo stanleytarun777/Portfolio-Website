@@ -121,15 +121,15 @@ export default function Hero() {
 
           {/* ── Right column: About Me only ── */}
           <div id="about">
-            <div className="rounded-2xl border border-[#102948]/20 bg-[#102948] p-6 shadow-sm sm:p-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-white/60" />
-                <span className="text-xs font-semibold uppercase tracking-widest text-white/70">About Me</span>
+            <div className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm sm:p-7">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[rgba(16,41,72,0.07)] px-3 py-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#102948]" />
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#102948]">About Me</span>
               </div>
-              <h2 className="mt-4 text-xl font-bold tracking-tight text-white sm:text-2xl">
+              <h2 className="mt-4 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
                 A bit more about me
               </h2>
-              <div className="mt-4 space-y-3.5 text-sm leading-7 text-white/75">
+              <div className="mt-4 space-y-3.5 text-sm leading-7 text-slate-600">
                 <p>
                   I am a Computer Information Systems (CIS) major with a concentration in Computer
                   Science, pursuing opportunities in software engineering, web development, and
