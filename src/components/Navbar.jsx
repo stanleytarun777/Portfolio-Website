@@ -15,10 +15,10 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between gap-4">
           <a
             href="#home"
-            className="text-base font-bold tracking-tight text-slate-900 hover:text-[#102948] transition-colors"
+            className="shrink-0 text-base font-bold tracking-tight text-slate-900 hover:text-[#102948] transition-colors"
           >
             {profile.name}
           </a>
@@ -34,6 +34,15 @@ export default function Navbar() {
               </a>
             ))}
           </nav>
+
+          <div className="hidden md:flex shrink-0">
+            <a
+              href="#contact"
+              className="rounded-full bg-[#102948] px-4 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-[#173f76]"
+            >
+              Hire Me
+            </a>
+          </div>
 
           <button
             type="button"
@@ -65,6 +74,15 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <div className="mt-2 px-1">
+            <a
+              href="#contact"
+              className="block rounded-xl bg-[#102948] px-4 py-3 text-center text-sm font-semibold text-white"
+              onClick={() => setOpen(false)}
+            >
+              Hire Me
+            </a>
+          </div>
         </div>
       )}
     </header>
