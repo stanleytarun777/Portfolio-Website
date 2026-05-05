@@ -1,6 +1,5 @@
 import "./App.css";
 import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
@@ -17,13 +16,11 @@ function App() {
       <Navbar />
 
       <main className="main-content">
-        <Hero />
-
         <div className="page-stack">
           <About />
+          <Experience />
           <Skills />
           <Projects />
-          <Experience />
           <Contact />
         </div>
       </main>
