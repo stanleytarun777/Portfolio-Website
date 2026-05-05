@@ -808,7 +808,7 @@ h1, h2, h3, p, ul {
 .contact-info {
   margin-top: 32px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.3);
+  color: white;
 }
 
 /* ===== FOOTER ===== */
@@ -827,7 +827,7 @@ h1, h2, h3, p, ul {
   gap: 6px;
   text-align: center;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.3);
+  color: white;
 }
 
 /* ===== RESPONSIVE — 640px ===== */
