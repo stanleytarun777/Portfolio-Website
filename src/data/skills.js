@@ -6,7 +6,6 @@ export const skillGroups = [
       "JavaScript",
       "HTML",
       "CSS",
-      "CSS",
       "Node.js",
       "Python",
       "REST APIs",
