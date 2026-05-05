@@ -23,83 +23,79 @@ export default function Hero() {
         <div className="grid gap-6 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:items-start lg:gap-8">
 
           {/* Left Panel — Profile Image + Identity (navy) */}
-          <div className="rounded-2xl bg-[#102948] p-6 text-white shadow-[0_8px_32px_rgba(15,23,42,0.18)] sm:p-8">
+          <div className="rounded-2xl bg-[#102948] p-6 text-white shadow-[0_8px_32px_rgba(15,23,42,0.18)] sm:p-7">
+            <div className="flex items-start gap-5">
 
-            {/* Image */}
-            <div className="flex flex-col items-center">
+              {/* Image */}
               <img
                 src={profile.image}
                 alt={`${profile.name} professional headshot`}
-                className="h-44 w-44 rounded-2xl border-4 border-white/20 object-cover shadow-[0_16px_40px_rgba(0,0,0,0.28)]"
+                className="h-36 w-36 shrink-0 rounded-2xl border-4 border-white/20 object-cover shadow-[0_12px_32px_rgba(0,0,0,0.28)]"
               />
-              <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/15 px-3 py-1 text-xs font-semibold text-emerald-300">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                Available
-              </span>
-            </div>
 
-            {/* Identity */}
-            <div className="mt-6 border-t border-white/10 pt-6">
-              <h1 className="text-2xl font-bold tracking-tight text-white lg:text-3xl">
-                {profile.name}
-              </h1>
-              <p className="mt-1 text-sm font-semibold text-white/65">{profile.role}</p>
-            </div>
+              {/* Identity + Details */}
+              <div className="min-w-0 flex-1">
+                <h1 className="text-xl font-bold tracking-tight text-white lg:text-2xl">
+                  {profile.name}
+                </h1>
+                <p className="mt-1 text-sm font-semibold text-white/65">{profile.role}</p>
 
-            {/* Details */}
-            <div className="mt-5 space-y-3">
-              <div className="flex items-start gap-3">
-                <svg className="mt-0.5 h-4 w-4 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                </svg>
-                <p className="text-sm leading-6 text-white/70">{profile.college}</p>
+                <div className="mt-4 space-y-2.5">
+                  <div className="flex items-start gap-2.5">
+                    <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    </svg>
+                    <p className="text-xs leading-5 text-white/70">{profile.college}</p>
+                  </div>
+
+                  <div className="flex items-start gap-2.5">
+                    <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <p className="text-xs leading-5 text-white/70">
+                      {profile.major} &mdash; {profile.concentration} Concentration
+                    </p>
+                  </div>
+
+                  <div className="flex items-start gap-2.5">
+                    <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-xs leading-5 text-white/70">{profile.graduation}</p>
+                  </div>
+
+                  <div className="flex items-start gap-2.5">
+                    <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <p className="text-xs leading-5 text-white/70">{profile.location}</p>
+                  </div>
+                </div>
+
+                {/* Links */}
+                <div className="mt-5 flex flex-wrap gap-2.5">
+                  <a
+                    href={profile.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-[#0a66c2] px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#004182]"
+                  >
+                    <LinkedInIcon />
+                    LinkedIn
+                  </a>
+                  <a
+                    href={profile.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-white/15"
+                  >
+                    <GitHubIcon />
+                    GitHub
+                  </a>
+                </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <svg className="mt-0.5 h-4 w-4 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <p className="text-sm leading-6 text-white/70">
-                  {profile.major} &mdash; {profile.concentration} Concentration
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <svg className="mt-0.5 h-4 w-4 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-sm leading-6 text-white/70">{profile.graduation}</p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <svg className="mt-0.5 h-4 w-4 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-sm leading-6 text-white/70">{profile.location}</p>
-              </div>
-            </div>
-
-            {/* Links */}
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0a66c2] px-4 py-2 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#004182]"
-              >
-                <LinkedInIcon />
-                LinkedIn
-              </a>
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-white/15"
-              >
-                <GitHubIcon />
-                GitHub
-              </a>
             </div>
           </div>
 
