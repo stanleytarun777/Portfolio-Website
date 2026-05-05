@@ -7,7 +7,7 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} {profile.name}
         </p>
-        <p>Designed as a polished engineering portfolio with recruiter-first clarity.</p>
+        <p>Open to software engineering internships · Spring / Summer 2026</p>
       </div>
     </footer>
   );

@@ -1,8 +1,6 @@
 import { profile } from "../data/profile.js";
 
 const quickFacts = [
-  { label: "College", value: profile.college },
-  { label: "Major", value: `${profile.major} • ${profile.concentration}` },
   { label: "Location", value: profile.location },
   { label: "Graduation", value: profile.graduation },
 ];
@@ -11,11 +9,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="grid gap-6 rounded-[2rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(246,249,252,0.9))] p-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)] lg:grid-cols-[minmax(320px,0.9fr)_minmax(0,1.1fr)] lg:p-8"
+      className="grid gap-6 rounded-[2rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(246,249,252,0.9))] p-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)] lg:grid-cols-[minmax(360px,0.92fr)_minmax(0,1.08fr)] lg:items-start lg:p-8"
     >
-      <div className="rounded-[1.7rem] border border-slate-200/80 bg-white p-5 shadow-[0_12px_28px_rgba(15,23,42,0.05)]">
-        <div className="flex items-center gap-5">
-          <div className="h-24 w-24 shrink-0 overflow-hidden rounded-[1.5rem] border border-slate-200 shadow-[0_14px_24px_rgba(15,23,42,0.08)]">
+      <div className="rounded-[1.7rem] border border-slate-200/80 bg-white p-5 shadow-[0_12px_28px_rgba(15,23,42,0.05)] sm:p-6">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+          <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full border-4 border-white shadow-[0_16px_28px_rgba(15,23,42,0.1)] ring-1 ring-slate-200">
             <img
               src={profile.image}
               alt={`${profile.name} headshot`}
@@ -24,20 +22,14 @@ export default function About() {
           </div>
 
           <div className="min-w-0">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-slate-400">Name</p>
-            <h2 className="mt-1 text-2xl font-semibold tracking-[-0.04em] text-slate-950">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-slate-400">Profile</p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-[-0.045em] text-slate-950">
               {profile.name}
             </h2>
-
-            <p className="mt-4 text-[11px] uppercase tracking-[0.18em] text-slate-400">Role</p>
-            <p className="mt-1 text-sm font-medium text-slate-700">{profile.role}</p>
-
-            <p className="mt-4 text-[11px] uppercase tracking-[0.18em] text-slate-400">College</p>
-            <p className="mt-1 text-sm text-slate-600">{profile.college}</p>
-
-            <p className="mt-4 text-[11px] uppercase tracking-[0.18em] text-slate-400">Major</p>
-            <p className="mt-1 text-sm text-slate-600">
-              {profile.major} • {profile.concentration}
+            <p className="mt-3 text-base font-medium text-[var(--navy)]">{profile.role}</p>
+            <p className="mt-4 text-sm leading-7 text-slate-600">{profile.college}</p>
+            <p className="mt-1 text-sm leading-7 text-slate-500">
+              {profile.major} ({profile.concentration})
             </p>
           </div>
         </div>
@@ -55,17 +47,18 @@ export default function About() {
         </div>
       </div>
 
-      <div className="rounded-[1.7rem] border border-slate-200/80 bg-[linear-gradient(180deg,#102948,#15365f)] p-6 text-white shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
+      <div className="rounded-[1.7rem] border border-slate-200/80 bg-[linear-gradient(180deg,#102948,#15365f)] p-6 text-white shadow-[0_18px_40px_rgba(15,23,42,0.12)] sm:p-7">
         <p className="text-xs uppercase tracking-[0.2em] text-white/58">About Me</p>
-        <h2 className="mt-4 text-4xl font-semibold tracking-[-0.055em] text-white sm:text-[3rem]">
-          A software-focused portfolio built around substance, not noise.
+        <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.05em] text-white sm:text-[2.6rem]">
+          I like building things that are useful, clear, and easy to maintain.
         </h2>
         <p className="mt-5 text-base leading-8 text-white/76">{profile.summary}</p>
         <p className="mt-5 text-base leading-8 text-white/72">
-          I bring a combination of frontend development practice, systems awareness,
-          and practical execution shaped by coursework, independent builds, and
-          hands-on campus work. I care about writing clean code, understanding the
-          problem clearly, and building solutions that feel reliable and intentional.
+          A lot of what I know came from building things on my own, working
+          through coursework, and figuring out how to make ideas work in actual
+          code. I pay close attention to structure and usability — I want what
+          I build to be something other people can understand, maintain, and
+          actually use.
         </p>
       </div>
     </section>

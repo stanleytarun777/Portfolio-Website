@@ -2,9 +2,9 @@ import { useState } from "react";
 import { profile } from "../data/profile.js";
 
 const metrics = [
-  "Full-stack development",
-  "Network systems foundation",
-  "Clean execution style",
+  "I build full-stack React apps",
+  "I've processed 40K+ real records",
+  "I hold two Meta certifications",
 ];
 
 export default function Hero() {
@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-end lg:gap-10">
           <div className="rounded-[2rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(246,249,252,0.88))] p-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
             <div className="inline-flex items-center rounded-full border border-[rgba(16,41,77,0.08)] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-              Software Portfolio
+              Stanley Nyford
             </div>
 
             <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-[4.25rem]">
@@ -32,13 +32,13 @@ export default function Hero() {
                 href="#projects"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--navy)] px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_34px_rgba(13,35,70,0.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#173f76]"
               >
-                View Selected Work
+                View My Projects
               </a>
               <a
                 href={`mailto:${profile.email}`}
                 className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-[0_12px_24px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950"
               >
-                Contact Stanley
+                Email Me
               </a>
             </div>
 

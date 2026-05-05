@@ -28,7 +28,7 @@ export default function Navbar() {
               {profile.name}
             </p>
             <p className="truncate text-xs text-slate-500">
-              {profile.major} • {profile.concentration}
+              {profile.role}
             </p>
           </div>
         </a>

@@ -1,13 +1,13 @@
 export const education = {
   degree:
-    "Bachelor of Science in Computer Information Systems (Computer Science Concentration)",
+    "Bachelor of Science in Computer Information Systems — Computer Science Concentration",
   school: "Nicholls State University, Thibodaux, LA",
   graduation: "Expected Graduation: May 2027",
 };
 
 export const certifications = [
-  "Meta Front-End Developer Certificate — Coursera (June 2025)",
-  "Meta JavaScript Certificate — Coursera (March 2025)",
+  "Meta Front-End Developer Certificate — Coursera, June 2025",
+  "Meta JavaScript Developer Certificate — Coursera, March 2025",
 ];
 
 export const experiences = [
@@ -16,9 +16,9 @@ export const experiences = [
     organization: "Nicholls State University",
     timeframe: "October 2025 – Present",
     points: [
-      "Processed and cleaned over 40,000 records in Excel to improve data accuracy and support system updates.",
-      "Analyzed workflows and identified inefficiencies to enhance onboarding and operational processes.",
-      "Conducted process audits to improve classification systems and increase resource accessibility.",
+      "Cleaned and processed over 40,000 records in Excel to support a catalog system migration and improve data accuracy.",
+      "Identified workflow inefficiencies in onboarding and operational processes, contributing to documented improvements.",
+      "Audited classification systems to surface coverage gaps and make library resources easier to locate and access.",
     ],
   },
   {
@@ -26,17 +26,17 @@ export const experiences = [
     organization: "Nicholls State University Housing",
     timeframe: "May 2025 – August 2025",
     points: [
-      "Provided front-desk support, assisting students and families with housing-related inquiries.",
-      "Prepared residence hall rooms for occupancy by organizing and setting up essential resources.",
-      "Supported operations by maintaining structured data systems and organizing records.",
+      "Assisted students and families at the front desk with housing inquiries, check-ins, and room assignments.",
+      "Prepared and organized residence hall rooms for move-in, coordinating setup across multiple units during high-volume turnover.",
+      "Maintained structured housing records to support accurate tracking and reporting across the department.",
     ],
   },
 ];
 
 export const networkingExperience = [
-  "Configured and managed network switches and routers using command-line interfaces.",
-  "Designed and implemented VLAN segmentation to improve network performance and security.",
-  "Assigned and managed IP addressing schemes across multi-device environments.",
-  "Performed network diagnostics and troubleshooting to resolve connectivity and configuration issues.",
-  "Simulated enterprise network environments, including topology design and redundancy planning.",
+  "Configured and managed network switches and routers using CLI commands across lab environments.",
+  "Designed and implemented VLAN segmentation to improve network isolation and traffic performance.",
+  "Planned and applied IP addressing schemes across multi-device topologies.",
+  "Performed diagnostics and resolved connectivity and configuration issues in simulated enterprise networks.",
+  "Designed redundant network topologies including failover and load-balancing scenarios.",
 ];
