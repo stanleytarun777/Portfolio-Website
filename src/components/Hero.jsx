@@ -119,7 +119,7 @@ export default function Hero() {
                 <span className="section-badge-dot"></span>
                 <span className="section-badge-text">About Me</span>
               </div>
-              <h2 className="about-heading">A bit more about me</h2>
+
               <div className="about-body">
                 <p>
                   I am a Computer Information Systems (CIS) major with a concentration in Computer
