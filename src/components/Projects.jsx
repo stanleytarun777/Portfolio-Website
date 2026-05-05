@@ -42,7 +42,7 @@ function ProjectCard({ project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-[#102948] px-3 py-1.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#173f76]"
+              className="inline-flex items-center gap-1.5 rounded-full bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white shadow-sm transition hover:bg-emerald-700"
             >
               Live
               <ExternalLinkIcon />
