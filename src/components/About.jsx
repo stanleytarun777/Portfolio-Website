@@ -16,20 +16,29 @@ export default function About() {
             </h2>
             <div className="mt-6 space-y-4 text-base leading-8 text-slate-600">
               <p>
-                I'm studying at Nicholls State University, working toward a degree in Computer
-                Information Systems with a Computer Science concentration. Most of my real
-                skill-building has happened outside of class — through side projects and
-                figuring out how things actually work in practice.
+                I am a Computer Information Systems (CIS) major with a concentration in Computer
+                Science, pursuing opportunities in software engineering, web development, and
+                technology roles. My academic background blends technical programming skills with
+                a strong understanding of business systems and information technology, allowing me
+                to approach software development from both a technical and organizational
+                perspective.
               </p>
               <p>
-                I write code I'm comfortable handing off to someone else — readable, structured,
-                and organized. I care about the full picture: not just making something work,
-                but making sure it holds up over time and is easy for others to understand.
+                I have hands-on experience developing responsive, modern web applications and
+                websites using HTML, CSS, JavaScript, and React. Recently, I developed a
+                full-stack task management application (TaskFlow) using React for the frontend
+                and Supabase for backend data handling, featuring authentication, task tracking,
+                analytics, and a responsive dashboard. You can find the GitHub repository and
+                live demo under Projects below. I focus on writing maintainable code while
+                enjoying turning ideas into functional solutions.
               </p>
               <p>
-                Right now I'm actively looking for software engineering or web development
-                internships where I can do real work, learn from experienced engineers, and
-                contribute something useful to a team.
+                Through coursework, independent projects, and practical experience, I have
+                developed a solid foundation in software development principles, debugging,
+                version control, and systems thinking. I am currently seeking a Software
+                Engineering, Web Development, or IT internship where I can apply my skills,
+                gain real-world experience, and contribute meaningfully to team projects. I am
+                motivated, adaptable, and committed to growing into a well-rounded professional.
               </p>
             </div>
           </div>
