@@ -99,14 +99,14 @@ function ProjectCard({ project }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-10 sm:py-14 lg:py-20">
+    <section id="projects" className="bg-[#102948] py-10 sm:py-14 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         <div className="mb-10 sm:mb-12">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
+          <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
             Projects I've built
           </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
             Each one taught me something real — about code, about design, and about finishing what I start.
           </p>
         </div>
