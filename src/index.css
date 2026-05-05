@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --canvas: #eef3f8;
+  --canvas: #edf2f7;
   --navy: #123a72;
 }
 
@@ -13,10 +13,10 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.96), transparent 28%),
-    linear-gradient(180deg, #f8fbff 0%, #eef3f8 48%, #e6eef8 100%);
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.97), transparent 24%),
+    linear-gradient(180deg, #f8fafc 0%, #edf2f7 46%, #e7edf5 100%);
   color: #0f172a;
-  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "SF Pro Display", "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,14 +42,6 @@ img {
 
 #root {
   min-height: 100vh;
-}
-
-.scene-shell {
-  position: relative;
-  min-height: 26rem;
-  overflow: hidden;
-  border-radius: 1.5rem;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
 }
 
 .animate-fade-up {

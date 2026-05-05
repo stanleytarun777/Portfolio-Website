@@ -1,7 +1,6 @@
 export const profile = {
   name: "Stanley Taru",
-  handle: "@stanleytaru",
-  role: "Software Development / IT Intern",
+  role: "Software Engineering / IT Intern Candidate",
   college: "Nicholls State University",
   major: "Computer Information Systems",
   concentration: "Computer Science concentration",
@@ -12,11 +11,11 @@ export const profile = {
   phone: "(985) 426-2099",
   github: "https://github.com/stanleytarun777",
   intro:
-    "Computer Information Systems major with a Computer Science concentration, building clean, maintainable web applications with a strong foundation in frontend development and business systems thinking.",
+    "Computer Information Systems major with a Computer Science concentration, building thoughtful software with a strong foundation in frontend engineering, systems thinking, and practical execution.",
   heroHeadline:
-    "Building practical software systems with product clarity, technical structure, and a calm execution style.",
+    "Building reliable software experiences with clarity, structure, and engineering discipline.",
   heroDescription:
-    "I am pursuing internship opportunities where I can contribute to software engineering, web development, and IT teams through clean implementation, systems thinking, and a strong willingness to learn fast.",
+    "I am pursuing software engineering, web development, and IT internship opportunities where I can contribute clean implementation, strong learning velocity, and a structured approach to solving real problems.",
   summary:
     "Computer Information Systems major with hands-on experience in full-stack software development and network systems through academic coursework and personal projects. Proficient in JavaScript, Python, and SQL, with experience designing, building, and deploying web applications, integrating APIs, and managing databases.",
   stats: [
