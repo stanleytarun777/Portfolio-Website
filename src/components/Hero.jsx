@@ -49,6 +49,9 @@ export default function Hero() {
                     src={profile.image}
                     alt={`${profile.name} professional headshot`}
                     className="w-36 rounded-xl border-4 border-white/20 object-contain shadow-[0_8px_24px_rgba(0,0,0,0.35)] sm:w-40 md:w-44"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
                   />
                   <div className="flex gap-1">
                     <a
