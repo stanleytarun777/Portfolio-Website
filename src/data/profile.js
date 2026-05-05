@@ -11,7 +11,6 @@ export const profile = {
   email: "nyfordstanley777@gmail.com",
   phone: "(985) 426-2099",
   github: "https://github.com/stanleytarun777",
-  linkedInLabel: "LinkedIn-style portfolio",
   intro:
     "Computer Information Systems major with a Computer Science concentration, building clean, maintainable web applications with a strong foundation in frontend development and business systems thinking.",
   heroHeadline:

@@ -93,13 +93,13 @@ export default function Hero() {
                   href="#contact"
                   className="inline-flex items-center justify-center rounded-full bg-[var(--navy)] px-5 py-3 text-sm font-semibold text-white shadow-[0_22px_34px_rgba(13,35,70,0.24)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#173f76]"
                 >
-                  Follow / Connect
+                  Connect
                 </a>
                 <a
                   href="#experience"
                   className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/82 px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_14px_28px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950"
                 >
-                  Resume
+                  Resume Highlights
                 </a>
                 <a
                   href={`mailto:${profile.email}`}
