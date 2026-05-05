@@ -35,15 +35,6 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden md:flex shrink-0">
-            <a
-              href="#contact"
-              className="rounded-full bg-[#102948] px-4 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-[#173f76]"
-            >
-              Hire Me
-            </a>
-          </div>
-
           <button
             type="button"
             className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm"
@@ -74,15 +65,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <div className="mt-2 px-1">
-            <a
-              href="#contact"
-              className="block rounded-xl bg-[#102948] px-4 py-3 text-center text-sm font-semibold text-white"
-              onClick={() => setOpen(false)}
-            >
-              Hire Me
-            </a>
-          </div>
         </div>
       )}
     </header>

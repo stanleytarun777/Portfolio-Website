@@ -51,7 +51,6 @@ export default function Hero() {
               <h1 className="text-xl font-bold tracking-tight text-white sm:text-2xl">
                 {profile.name}
               </h1>
-              <p className="mt-1.5 text-sm font-semibold text-white/55">{profile.role}</p>
             </div>
 
             {/* Divider */}
