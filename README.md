@@ -1,20 +1,118 @@
 # Stanley Nyford — Portfolio Website
 
-A personal portfolio website built with **React + Vite** and plain CSS — no UI frameworks, no component libraries. Every layout, interaction, and style is hand-written to demonstrate real front-end competency.
+A fully responsive personal portfolio built with **React 19** and **hand-written CSS** — no UI frameworks, no component libraries, no utility-class systems. Every layout, animation, and style rule is authored from scratch to demonstrate genuine front-end competency.
 
-**Live:** [portfolio-website-seven-rho-x975x5bbq6.vercel.app](https://portfolio-website-seven-rho-x975x5bbq6.vercel.app/)
+**Live site:** [portfolio-website-seven-rho-x975x5bbq6.vercel.app](https://portfolio-website-seven-rho-x975x5bbq6.vercel.app/)  
+**GitHub:** [github.com/stanleytarun777/Portfolio-Website](https://github.com/stanleytarun777/Portfolio-Website)
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology |
+### Languages
+| Language | Usage |
 |---|---|
-| Framework | React 19 |
-| Build Tool | Vite 7 |
-| Styling | Plain CSS (custom properties, media queries) |
-| Deployment | Vercel |
-| Linting | ESLint |
+| JavaScript (ES2020+) | All application logic, component behavior, data |
+| JSX | React component templating |
+| CSS3 | All styling — hand-written, zero dependencies |
+| HTML5 | Entry point (`index.html`), semantic document structure |
+
+### Frameworks & Libraries
+| Package | Version | Role |
+|---|---|---|
+| React | 19.2.0 | Component-based UI framework |
+| React DOM | 19.2.0 | DOM rendering and reconciliation |
+| Vite | 7.2.4 | Build tool, dev server, HMR |
+| @vitejs/plugin-react | 5.1.1 | Babel-powered JSX transform and Fast Refresh |
+
+### Dev Tools
+| Tool | Version | Role |
+|---|---|---|
+| ESLint | 9.39.1 | Static code analysis |
+| eslint-plugin-react-hooks | latest | Enforces Rules of Hooks |
+| eslint-plugin-react-refresh | latest | Ensures components are HMR-safe |
+| Node.js | 24.x | Runtime |
+| npm | 11.x | Package manager |
+
+### Infrastructure
+| Service | Usage |
+|---|---|
+| Vercel | Hosting and continuous deployment |
+| GitHub | Version control and source of truth for deployments |
+
+---
+
+## Architecture
+
+The project follows a **data-driven component architecture**. All displayed content lives in `/src/data/` — components are pure presentational shells that receive data and render markup. Updating the portfolio requires no JSX changes, only edits to data files.
+
+```
+src/
+├── data/           ← All content lives here
+│   ├── profile.js      Name, contact, bio, social links
+│   ├── projects.jsx    Project titles, summaries, stacks, URLs
+│   ├── resume.js       Education, certifications, work experience
+│   └── skills.js       Skill groups and individual items
+│
+├── components/     ← Pure presentational components
+│   ├── Navbar.jsx      Sticky nav, mobile hamburger toggle
+│   ├── Hero.jsx        Identity card, social links, certs, about
+│   ├── Projects.jsx    Project cards with problem/stack/highlights
+│   ├── Skills.jsx      Skill group cards with pill badges
+│   ├── Contact.jsx     CTA section with contact buttons
+│   └── Footer.jsx      Copyright footer
+│
+├── App.jsx         ← Root layout
+├── main.jsx        ← React DOM entry point
+└── index.css       ← All styles (885 lines)
+```
+
+**Module system:** ES Modules throughout (`"type": "module"` in `package.json`).  
+**State:** Component-local only (`useState` for mobile nav toggle). No global state library needed.  
+**Icons:** Inline SVG — no icon library. LinkedIn, GitHub, Email, skill category, and UI icons are hand-coded SVG paths.
+
+---
+
+## CSS Design System
+
+All styles are in a single `src/index.css` file (885 lines). No preprocessor, no framework.
+
+### Custom Properties (Design Tokens)
+```css
+:root {
+  /* Brand navy */
+  --navy:       #102948;
+  --navy-dark:  #0a1d35;
+  --navy-deep:  #0f2340;
+
+  /* Accent colors */
+  --emerald:         #059669;   /* Live/CTA buttons */
+  --emerald-hover:   #047857;
+  --linkedin-blue:   #0a66c2;
+
+  /* Neutral scale (slate) */
+  --slate-50 … --slate-900
+}
+```
+
+### Layout Techniques
+- **CSS Grid** — hero two-column layout, projects card grid, skills card grid
+- **CSS Flexbox** — navbar, identity card row, social buttons, pill groups, contact buttons
+- **CSS Custom Properties** — entire color palette driven by tokens, no magic numbers in component styles
+
+### Responsive Breakpoints
+| Breakpoint | Behavior |
+|---|---|
+| Default (mobile) | Single column, hamburger nav, stacked layout |
+| `640px` | Two-column project grid, row contact buttons, larger type |
+| `1024px` | Desktop nav visible, three-column project grid, two-column hero, two-column skills |
+
+### Visual Techniques
+- `box-shadow: inset 0 0 0 6px var(--navy)` — navy edge border on `#root`
+- CSS `transition` on hover states (translate, shadow, background, border)
+- `linear-gradient` — project card accent bar
+- `scroll-behavior: smooth` — smooth anchor navigation
+- `::selection` — branded text selection highlight
 
 ---
 
@@ -23,62 +121,82 @@ A personal portfolio website built with **React + Vite** and plain CSS — no UI
 ```
 portfolio/
 ├── public/
-│   └── headshot.png              # Profile image
+│   └── headshot.png               # Profile photo (replace to update)
 ├── src/
+│   ├── assets/                    # Static assets (Vite-managed)
 │   ├── components/
-│   │   ├── Navbar.jsx            # Sticky nav with mobile hamburger menu
-│   │   ├── Hero.jsx              # Identity card, social links, certifications, about
-│   │   ├── Projects.jsx          # Project cards with stack, problem, and highlights
-│   │   ├── Skills.jsx            # Technical skills and networking skill groups
-│   │   ├── Contact.jsx           # Contact section with email, LinkedIn, GitHub
-│   │   └── Footer.jsx            # Footer with copyright
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Contact.jsx
+│   │   └── Footer.jsx
 │   ├── data/
-│   │   ├── profile.js            # Name, contact info, links, bio
-│   │   ├── projects.jsx          # Project titles, summaries, stacks, URLs
-│   │   ├── resume.js             # Education, certifications, work experience
-│   │   └── skills.js             # Skill groups and items
-│   ├── App.jsx                   # Root component and layout
-│   ├── main.jsx                  # React entry point
-│   └── index.css                 # All styles — variables, components, responsive breakpoints
-├── package.json
-└── vite.config.js
+│   │   ├── profile.js
+│   │   ├── projects.jsx
+│   │   ├── resume.js
+│   │   └── skills.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── eslint.config.js
+├── vite.config.js
+└── package.json
 ```
 
 ---
 
-## Features
+## Sections
 
-- **Responsive layout** — mobile-first design with breakpoints at 640px and 1024px
-- **Sticky navigation** — collapses to a hamburger menu on small screens
-- **Identity card** — profile image, social buttons, education details, and certifications in one panel
-- **Project cards** — each card surfaces the problem solved, tech stack, and key features
-- **Skills grid** — Technical Skills and Networking displayed as readable pill groups
-- **Contact section** — direct email, LinkedIn, and GitHub links in a dedicated call-to-action
-- **Fast image loading** — `fetchpriority="high"`, `loading="eager"`, `decoding="async"` on the profile image
-- **No Tailwind, no UI libraries** — all CSS is hand-written using custom properties and media queries
+| Section | Component | Description |
+|---|---|---|
+| Home | `Hero.jsx` | Profile image, name, education details, social links |
+| About | `Hero.jsx` | Inline about panel with bio text |
+| Certifications | `Hero.jsx` | Meta certifications displayed as a card |
+| Projects | `Projects.jsx` | Cards for each project with problem, stack, highlights, and links |
+| Skills | `Skills.jsx` | Technical Skills and Networking groups as pill badges |
+| Contact | `Contact.jsx` | Email, LinkedIn, GitHub call-to-action with dark navy background |
+| Footer | `Footer.jsx` | Copyright and internship availability note |
+
+### Accessibility
+- Semantic HTML throughout: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`
+- `aria-label` on the `<nav>` element and hamburger `<button>`
+- `aria-expanded` on the mobile nav toggle to communicate open/close state
+- `alt` text on the profile image
+
+### Performance
+- Profile image uses `fetchpriority="high"`, `loading="eager"`, and `decoding="async"` to avoid render-blocking
+- Production bundle: **~212 KB JS** (66 KB gzip) · **~12 KB CSS** (2.7 KB gzip)
+- Zero third-party CSS or icon libraries — nothing to fetch beyond the app bundle
 
 ---
 
 ## Projects Showcased
 
-### DuelyDo
-A productivity platform that converts course syllabi into an organized semester plan. Parses uploads in under 60 seconds, automatically extracts professor contact info, office hours, and class meeting times, and displays everything in a unified task dashboard.
+### DuelyDo — Syllabus-to-Dashboard Productivity Tool
+Converts uploaded course syllabi into an organized semester plan in under 60 seconds. Automatically extracts professor contact info, office hours, and class meeting times.
 
-- **Stack:** React, JavaScript, Supabase, HTML, CSS, Vercel
+- **Stack:** React · JavaScript · Supabase · HTML · CSS · Vercel
+- **Backend:** Supabase (authentication, PostgreSQL storage, cross-session state)
 - **Repo:** [DuelyDo Public Showcase](https://github.com/stanleytarun777/DuelyDo_Public_Showcase)
 - **Live:** [duely-nine.vercel.app](https://duely-nine.vercel.app/)
 
-### Portfolio Website
-This site. Designed and built from scratch with React and plain CSS to present projects and technical background clearly to recruiters.
+---
 
-- **Stack:** React, JavaScript, CSS, Vercel
+### Portfolio Website — This Site
+Designed and built from scratch. No templates, no UI kits.
+
+- **Stack:** React · JavaScript · CSS · Vercel
 - **Repo:** [Portfolio-Website](https://github.com/stanleytarun777/Portfolio-Website)
 - **Live:** [portfolio-website-seven-rho-x975x5bbq6.vercel.app](https://portfolio-website-seven-rho-x975x5bbq6.vercel.app/)
 
-### Web Calculator
-A responsive calculator built entirely in vanilla JavaScript — no libraries. Handles real-time arithmetic, chained operations, and edge-case input flows with zero external dependencies.
+---
 
-- **Stack:** JavaScript, HTML, CSS
+### Web Calculator — Vanilla JS Exercise
+Full arithmetic flow with real-time display, chained operations, and edge-case handling — zero external dependencies.
+
+- **Stack:** JavaScript · HTML · CSS
 - **Repo:** [Web-Calculator](https://github.com/stanleytarun777/Web-Calculator)
 - **Live:** [stanleytarun777.github.io/Web-Calculator](https://stanleytarun777.github.io/Web-Calculator/)
 
@@ -89,63 +207,73 @@ A responsive calculator built entirely in vanilla JavaScript — no libraries. H
 **Prerequisites:** Node.js 18+
 
 ```bash
-# Clone the repository
+# Clone
 git clone https://github.com/stanleytarun777/Portfolio-Website.git
 cd Portfolio-Website/portfolio
 
-# Install dependencies
+# Install
 npm install
 
-# Start the development server
+# Develop
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [http://localhost:5173](http://localhost:5173). Vite provides instant hot module replacement on every save.
 
-### Available Scripts
+### Scripts
 
 ```bash
-npm run dev        # Start development server with hot reload
+npm run dev        # Dev server with HMR (Vite)
 npm run build      # Production build → dist/
-npm run preview    # Preview the production build locally
-npm run lint       # Run ESLint
+npm run preview    # Serve the production build locally
+npm run lint       # ESLint across all .js and .jsx files
 ```
 
 ---
 
 ## Customization
 
-All content is driven by data files in `src/data/` — no hunting through JSX to update text.
+### Updating Content
+
+All content is in `src/data/` — no JSX edits needed for text changes.
 
 | File | What to edit |
 |---|---|
-| `src/data/profile.js` | Name, contact info, bio, social links |
-| `src/data/projects.jsx` | Project titles, summaries, stacks, GitHub/live URLs |
-| `src/data/resume.js` | Education, certifications, work experience |
-| `src/data/skills.js` | Skill groups and individual skill items |
-| `public/headshot.png` | Profile image — replace the file, keep the filename |
+| `src/data/profile.js` | Name, title, location, bio, email, phone, GitHub, LinkedIn |
+| `src/data/projects.jsx` | Project titles, summaries, problems, stacks, GitHub/live URLs |
+| `src/data/resume.js` | Education degree, school, graduation date, certifications, work experience |
+| `src/data/skills.js` | Skill group names and individual skill items |
+| `public/headshot.png` | Profile photo — replace the file, keep the filename |
 
-To update styles, edit `src/index.css`. The full color palette and spacing scale are defined as CSS custom properties at the top of the file under `:root`.
+### Updating Styles
+
+Open `src/index.css`. The color palette is at the top of the file in `:root` — change the custom property values to re-theme the entire site. Component styles are grouped by section with clearly labeled comments.
 
 ---
 
 ## Deployment
 
-The site is deployed on **Vercel** with automatic deployments triggered on every push to `main`.
+Deployed on **Vercel** with automatic deployments on every push to `main`.
 
-To deploy your own fork:
+**To deploy your own fork:**
 
-1. Push the repository to GitHub
-2. Import the project at [vercel.com/new](https://vercel.com/new)
+1. Fork this repository and push to your GitHub account
+2. Go to [vercel.com/new](https://vercel.com/new) and import the repository
 3. Set the **Root Directory** to `portfolio`
-4. Vercel auto-detects Vite — no additional build configuration required
+4. Framework preset: **Vite** (auto-detected)
+5. Click Deploy — no environment variables required
 
 ---
 
 ## Contact
 
-**Stanley Nyford** — Computer Information Systems student at Nicholls State University, actively seeking software engineering, web development, and IT internships.
+**Stanley Nyford**  
+Computer Information Systems · Computer Science Concentration  
+Nicholls State University — Expected May 2027  
+Actively seeking software engineering, web development, and IT internships.
 
-- Email: [nyfordstanley777@gmail.com](mailto:nyfordstanley777@gmail.com)
-- LinkedIn: [linkedin.com/in/stanley-nyford-75aa853a9](https://www.linkedin.com/in/stanley-nyford-75aa853a9)
-- GitHub: [github.com/stanleytarun777](https://github.com/stanleytarun777)
+| | |
+|---|---|
+| Email | [nyfordstanley777@gmail.com](mailto:nyfordstanley777@gmail.com) |
+| LinkedIn | [linkedin.com/in/stanley-nyford-75aa853a9](https://www.linkedin.com/in/stanley-nyford-75aa853a9) |
+| GitHub | [github.com/stanleytarun777](https://github.com/stanleytarun777) |
