@@ -827,7 +827,7 @@ h1, h2, h3, p, ul {
   gap: 6px;
   text-align: center;
   font-size: 14px;
-  color: white;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* ===== RESPONSIVE — 640px ===== */
